@@ -1,0 +1,11 @@
+{
+    "type": "origins:prevent_sleep",
+    "message": "It's not ",
+    "condition": {
+        "type": "origins:food_level",
+        "comparison": ">=",
+        "compare_to": 18
+    },
+    "name": "Picky Sleeper",
+    "description": "You can only go to sleep on a full stomach."
+}

@@ -1,0 +1,15 @@
+{
+    "type": "origins:fire_projectile",
+    "entity_type": "minecraft:llama_spit",
+    "cooldown": 40,
+    "hud_render": {
+        "should_render": false
+    },
+    "sound": "minecraft:entity.llama.spit",
+    "key": {
+        "key": "key.origins.secondary_active",
+        "continuous": false
+    },
+    "name": "Spit",
+    "description": "How disrespectful..."
+}

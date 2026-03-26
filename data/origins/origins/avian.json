@@ -1,0 +1,16 @@
+{
+    "loading_priority": 10,
+    "powers": [
+        "origins:fresh_air",
+        "origins:like_air",
+        "origins:tailwind",
+        "origins:lay_eggs",
+        "origins:vegetarian",
+        "snowy:float"
+    ],
+    "icon": {
+        "item": "minecraft:feather"
+    },
+    "order": 0,
+    "impact": 1
+}

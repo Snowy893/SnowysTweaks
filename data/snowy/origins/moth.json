@@ -1,0 +1,15 @@
+{
+    "powers": [
+        "snowy:tiny",
+        "snowy:nimble",
+        "snowy:small_appetite",
+        "snowy:night_light",
+        "snowy:geppo",
+        "origins:climbing"
+    ],
+    "icon": "minecraft:lantern",
+    "order": 0,
+    "impact": 3,
+    "name": "Mothkin",
+    "description": "These small moths have lost their wings from under-use."
+}

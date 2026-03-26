@@ -1,0 +1,10 @@
+{
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+        "name": "Origin modifier",
+        "operation": "multiply_base",
+        "value": -0.5
+    },
+    "name": "Small Appetite",
+    "description": "Due to your size, you don't need to eat as much."
+}

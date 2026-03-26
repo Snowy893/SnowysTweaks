@@ -1,0 +1,11 @@
+{
+    "type": "origins:attribute",
+    "modifier": {
+        "name": "Base speed increase",
+        "attribute": "minecraft:generic.movement_speed",
+        "value": 0.03,
+        "operation": "addition"
+    },
+    "name": "Gallop",
+    "description": "You're faster on your feet than most creatures."
+}

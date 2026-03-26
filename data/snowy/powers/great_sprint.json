@@ -1,0 +1,23 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:speed",
+            "duration": 160,
+            "amplifier": 1
+        }
+    },
+    "cooldown": 600,
+    "key": {
+        "key": "key.origins.primary_active",
+        "continuous": false
+    },
+    "hud_render": {
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+        "bar_index": 9,
+        "should_render": true
+    },
+    "name": "Great Sprint",
+    "description": "Burst forward at great speeds for 8 seconds."
+}

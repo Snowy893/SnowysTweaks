@@ -1,0 +1,14 @@
+{
+    "powers": [
+        "snowy:short_stature",
+        "snowy:hunted",
+        "snowy:picky_sleeper",
+        "snowy:refined_palate",
+        "origins:cat_vision"
+    ],
+    "icon": "minecraft:rotten_flesh",
+    "order": 4,
+    "impact": 1,
+    "name": "Raccoon",
+    "description": "Scavengers of the night."
+}

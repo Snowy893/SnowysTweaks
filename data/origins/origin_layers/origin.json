@@ -1,0 +1,15 @@
+{
+    "replace": true,
+    "origins": [
+        "origins:arachnid",
+        "origins:avian",
+        "origins:blazeborn",
+        "origins:elytrian",
+        "origins:enderian",
+        "origins:feline",
+        "origins:merling",
+        "snowy:moth",
+        "snowy:raccoon",
+        "snowy:horse"
+    ]
+}

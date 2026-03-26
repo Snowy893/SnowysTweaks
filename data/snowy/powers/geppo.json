@@ -1,0 +1,116 @@
+{
+    "type": "origins:multiple",
+    "jumps": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 3,
+        "start_value": 3,
+        "hud_render": {
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 23,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_jumps",
+                "comparison": "<",
+                "compare_to": 3
+            }
+        }
+    },
+    "restore": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_jumps",
+            "change": 100
+        },
+        "interval": 1,
+        "condition": {
+            "type": "origins:on_block"
+        }
+    },
+    "key_press": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_jumps",
+                    "change": -1
+                },
+                {
+                    "type": "origins:add_velocity",
+                    "space": "local_horizontal",
+                    "z": 0.4,
+                    "client": true,
+                    "server": true
+                },
+                {
+                    "type": "origins:add_velocity",
+                    "space": "world",
+                    "y": 0.7,
+                    "client": true,
+                    "server": true
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "/particle cloud ~ ~ ~ 0.2 0 0.2 0 6 normal"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.llama.spit",
+                    "volume": 7,
+                    "pitch": 0.3
+                },
+                {
+                    "type": "origins:exhaust",
+                    "amount": 1
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_jumps",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_block",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:block_collision",
+                    "block_condition": {
+                        "type": "origins:fluid",
+                        "fluid_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "minecraft:water"
+                        }
+                    },
+                    "offset_x": 0.1,
+                    "offset_y": 0.1,
+                    "offset_z": 0.1,
+                    "inverted": true
+                },
+                {
+                    "type": "origins:food_level",
+                    "comparison": ">",
+                    "compare_to": 6
+                }
+            ]
+        },
+        "key": {
+            "key": "key.jump",
+            "continuous": false
+        },
+        "hud_render": {
+            "should_render": false
+        },
+        "cooldown": 8
+    },
+    "name": "Sky Walk",
+    "description": "You are light enough to push off of the air itself."
+}
