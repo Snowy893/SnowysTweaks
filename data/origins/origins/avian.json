@@ -2,7 +2,6 @@
     "loading_priority": 10,
     "powers": [
         "origins:fresh_air",
-        "origins:like_air",
         "origins:tailwind",
         "origins:lay_eggs",
         "origins:vegetarian",

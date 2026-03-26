@@ -14,7 +14,7 @@
     },
     "cooldown": 120,
     "key": {
-        "key": "key.jump",
+        "key": "key.origins.primary_active",
         "continuous": false
     },
     "hud_render": {
@@ -23,5 +23,5 @@
         "should_render": true
     },
     "name": "Float",
-    "description": "Jump while midair to float for 3 seconds."
+    "description": "You can float while midair for a few seconds."
 }
