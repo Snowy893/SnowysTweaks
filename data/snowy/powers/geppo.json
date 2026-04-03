@@ -59,7 +59,7 @@
                 {
                     "type": "origins:play_sound",
                     "sound": "minecraft:entity.llama.spit",
-                    "volume": 7,
+                    "volume": 4,
                     "pitch": 0.3
                 },
                 {
@@ -82,17 +82,13 @@
                     "inverted": true
                 },
                 {
-                    "type": "origins:block_collision",
+                    "type": "origins:in_block_anywhere",
                     "block_condition": {
-                        "type": "origins:fluid",
-                        "fluid_condition": {
-                            "type": "origins:in_tag",
-                            "tag": "minecraft:water"
-                        }
+                        "type": "origins:block",
+                        "block": "water"
                     },
-                    "offset_x": 0.1,
-                    "offset_y": 0.1,
-                    "offset_z": 0.1,
+                    "comparison": ">=",
+                    "compare_to": 1,
                     "inverted": true
                 },
                 {

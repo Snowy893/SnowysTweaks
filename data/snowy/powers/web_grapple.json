@@ -1,0 +1,52 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:raycast",
+                "distance": 16,
+                "block": true,
+                "entity": true,
+                "shape_type": "collider",
+                "fluid_handling": "any",
+                "bientity_action": {
+                    "type": "origins:add_velocity",
+                    "y": 0.5,
+                    "z": -3
+                },
+                "hit_action": {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.mud.place",
+                    "volume": 1,
+                    "pitch": 0.8
+                },
+                "command_along_ray": "particle firework ~ ~ ~ 0.1 0.1 0.1 0 2 normal",
+                "command_step": 0.5
+            },
+            {
+                "type": "origins:exhaust",
+                "amount": 1
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.llama.spit",
+                "volume": 0.8,
+                "pitch": 0.7
+            }
+        ]
+    },
+    "cooldown": 80,
+    "hud_render": {
+        "bar_index": 3,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "should_render": true
+    },
+    "condition": {
+        "type": "origins:food_level",
+        "comparison": ">",
+        "compare_to": 6
+    },
+    "name": "Web Shot",
+    "description": "You can shoot your webs at blocks to pull yourself towards them, and you can shoot at entities to pull them towards you!"
+}

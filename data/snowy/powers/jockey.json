@@ -1,0 +1,15 @@
+{
+    "type": "origins:action_on_being_used",
+    "bientity_action": {
+        "type": "origins:mount"
+    },
+    "bientity_condition": {
+        "type": "origins:target_condition",
+        "condition": {
+            "type": "origins:passenger",
+            "inverted": true
+        }
+    },
+    "name": "Jockey",
+    "description": "You can give other players a piggyback ride!"
+}

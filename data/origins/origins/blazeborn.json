@@ -4,11 +4,11 @@
         "origins:fire_immunity",
         "origins:nether_spawn",
         "origins:burning_wrath",
-        "origins:hotblooded",
-        "origins:flame_particles",
         "origins:damage_from_snowballs",
         "origins:damage_from_potions",
-        "snowy:water_vulnerability"
+        "origins:water_vulnerability",
+        "snowy:lava_swimmer",
+        "snowy:lava_sight"
     ],
     "icon": {
         "item": "minecraft:blaze_powder"

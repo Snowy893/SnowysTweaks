@@ -1,0 +1,10 @@
+{
+    "powers": [
+        "origins:shulker_inventory"
+    ],
+    "icon": "minecraft:bundle",
+    "order": 34,
+    "impact": 0,
+    "name": "Backpacker",
+    "description": "Backpackers are well organized and make sure to leave a little extra room for precious items."
+}

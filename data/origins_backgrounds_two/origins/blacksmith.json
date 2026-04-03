@@ -1,0 +1,9 @@
+{
+    "loading_priority": 10,
+    "powers": [
+        "origins_backgrounds_two:better_armor"
+    ],
+    "icon": "minecraft:iron_chestplate",
+    "order": 21,
+    "impact": 0
+}

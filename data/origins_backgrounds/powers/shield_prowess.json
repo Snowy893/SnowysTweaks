@@ -1,0 +1,24 @@
+{
+    "loading_priority": 10,
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:resistance",
+            "duration": 400,
+            "is_ambient": false,
+            "show_particles": false,
+            "show_icon": true
+        }
+    },
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "offhand",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "origins:shields"
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "loading_priority": 10,
+    "powers": [
+        "origins_backgrounds_two:lucky"
+    ],
+    "icon": "minecraft:diamond",
+    "order": 20,
+    "impact": 0,
+    "name": "Gambler",
+    "description": "You will stake your life on ridiculous odds, and win big."
+}

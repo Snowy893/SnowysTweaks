@@ -2,17 +2,15 @@
     "powers": [
         "snowy:gallop",
         "origins:sprint_jump",
-        "origins:natural_armor",
         "snowy:great_sprint",
-        "snowy:spit",
-        "snowy:hunted",
-        "snowy:horsefed",
-        "snowy:bad_swimmer",
-        "origins:no_shield"
+        "snowy:jockey",
+        "origins:no_shield",
+        "origins:vegetarian",
+        "origins:more_exhaustion"
     ],
     "icon": "minecraft:leather",
     "order": 0,
-    "impact": 2,
+    "impact": 3,
     "name": "Uma",
-    "description": "Hoofed animal of great speed."
+    "description": "Hoofed animals of great speed. "
 }

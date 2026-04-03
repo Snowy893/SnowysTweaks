@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "id": "goblins_tyranny:goblin_shield",
+            "required": false
+        }
+    ]
+}

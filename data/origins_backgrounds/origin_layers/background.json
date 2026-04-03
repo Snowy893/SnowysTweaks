@@ -1,0 +1,19 @@
+{
+    "replace": true,
+    "order": 15,
+    "enabled": true,
+    "allow_random": true,
+    "origins": [
+        "origins_backgrounds:acolyte",
+        "origins_backgrounds:guard",
+        "origins_backgrounds:novice_mage",
+        "origins_backgrounds:cultist",
+        "origins_backgrounds:cryptkeeper",
+        "origins_backgrounds_two:hunter",
+        "origins_backgrounds_two:miner",
+        "origins_backgrounds_two:blacksmith",
+        "origins_backgrounds_two:disenchanter",
+        "origins_backgrounds_two:angler",
+        "snowy:backpacker"
+    ]
+}

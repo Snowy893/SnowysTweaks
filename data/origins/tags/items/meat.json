@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values":[
+        "hearthandharvest:raw_sausage",
+        "hearthandharvest:cooked_sausage",
+        "hearthandharvest:skewered_sausage",
+        "hearthandharvest:jerky"
+    ]
+}

@@ -1,0 +1,121 @@
+{
+    "type": "origins:multiple",
+    "tp": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 10,
+                    "block": true,
+                    "entity": false,
+                    "space": "local",
+                    "shape_type": "collider",
+                    "fluid_handling": "any",
+                    "command_at_hit": "tp @s ~ ~ ~",
+                    "miss_action": {
+                        "type": "origins:execute_command",
+                        "command": "function snowy:raycasttp"
+                    }
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_tp_resource",
+                    "change": "-10"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_tp_cooldown",
+                    "change": "100",
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.enderman.teleport",
+                    "volume": "1"
+                },
+                {
+                    "type": "origins:exhaust",
+                    "amount": 1
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_tp_resource",
+                    "comparison": ">=",
+                    "compare_to": 10
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_tp_cooldown",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.origins.primary_active",
+            "continuous": false
+        }
+    },
+    "tp_cooldown": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 8,
+        "start_value": 0,
+        "hud_render": {
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 3,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_tp_cooldown",
+                "comparison": ">",
+                "compare_to": 0
+            }
+        }
+    },
+    "tp_cooldown_decrease": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "change": -1,
+            "resource": "*:*_tp_cooldown"
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_tp_cooldown",
+            "compare_to": 1,
+            "comparison": ">="
+        },
+        "interval": 1
+    },
+    "tp_resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 30,
+        "start_value": 30,
+        "hud_render": {
+            "should_render": true,
+            "bar_index": 6
+        }
+    },
+    "tp_regenerate": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_tp_resource",
+            "change": 1
+        },
+        "interval": 20
+    },
+    "name": "Teleport",
+    "description": "You can teleport where you're looking within a limited range."
+}

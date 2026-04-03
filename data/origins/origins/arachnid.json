@@ -1,0 +1,17 @@
+{
+    "loading_priority": 10,
+    "powers": [
+        "origins:climbing",
+        "origins:master_of_webs",
+        "origins:carnivore",
+        "origins:fragile",
+        "origins:arthropod",
+        "snowy:bad_swimmer",
+        "snowy:web_grapple"
+    ],
+    "icon": {
+        "item": "minecraft:cobweb"
+    },
+    "order": 1,
+    "impact": 1
+}

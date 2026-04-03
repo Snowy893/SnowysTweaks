@@ -1,23 +1,109 @@
 {
-    "type": "origins:active_self",
-    "entity_action": {
-        "type": "origins:apply_effect",
-        "effect": {
-            "effect": "minecraft:speed",
-            "duration": 160,
-            "amplifier": 1
+    "type": "origins:multiple",
+    "speed_resource": {
+        "type": "origins:resource",
+        "min": 100,
+        "max": 130,
+        "start_value": 100,
+        "hud_render": {
+            "should_render": false
         }
     },
-    "cooldown": 600,
-    "key": {
-        "key": "key.origins.primary_active",
-        "continuous": false
+    "deplete_resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 100,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 16,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_deplete_resource",
+                "comparison": ">",
+                "compare_to": 0
+            }
+        }
     },
-    "hud_render": {
-        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
-        "bar_index": 9,
-        "should_render": true
+    "speed": {
+        "type": "origins:modify_attribute",
+        "attribute": "minecraft:generic.movement_speed",
+        "modifiers": [
+            {
+                "operation": "multiply_base_multiplicative",
+                "value": 0.0,
+                "resource": "*:*_speed_resource"
+            },
+            {
+                "operation": "multiply_base_multiplicative",
+                "value": -0.99
+            }
+        ]
+    },
+    "key": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_speed_resource",
+                    "change": 1000
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_deplete_resource",
+                    "change": 1000
+                }
+            ]
+        },
+        "cooldown": 600,
+        "key": {
+            "key": "key.origins.primary_active",
+            "continuous": false
+        },
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 3,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_deplete_resource",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        },
+        "condition": {
+            "type": "origins:food_level",
+            "comparison": ">",
+            "compare_to": 6
+        }
+    },
+    "deplete": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_deplete_resource",
+            "change": -20
+        }
+    },
+    "speeddown": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_speed_resource",
+            "change": -1000
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_deplete_resource",
+            "comparison": "==",
+            "compare_to": 0
+        }
     },
     "name": "Great Sprint",
-    "description": "Burst forward at great speeds for 8 seconds."
+    "description": "Burst forward at great speed for 8 seconds."
 }

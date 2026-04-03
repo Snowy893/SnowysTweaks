@@ -1,12 +1,12 @@
 {
     "loading_priority": 10,
     "powers": [
-        "origins:throw_ender_pearl",
+        "snowy:raycast_tp",
         "origins:pumpkin_hate",
+        "snowy:passive_enderman",
         "origins:extra_reach",
-        "origins:ender_particles",
         "origins:damage_from_potions",
-        "snowy:water_vulnerability"
+        "origins:water_vulnerability"
     ],
     "icon": {
         "item": "minecraft:ender_pearl"

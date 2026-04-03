@@ -1,11 +1,12 @@
 {
 	"loading_priority": 10,
 	"powers": [
-		"origins:sprint_jump",
+		"snowy:sneak_jump",
 		"origins:velvet_paws",
 		"origins:nine_lives",
 		"origins:scare_creepers",
-		"origins:cat_vision"
+		"origins:cat_vision",
+		"origins:sneak_land"
 	],
 	"icon": {
 		"item": "minecraft:orange_wool"
