@@ -1,6 +1,7 @@
 {
     "powers": [
         "snowy:tiny",
+        "snowy:hitch_ride",
         "snowy:nimble",
         "snowy:less_exhaustion",
         "snowy:night_light",

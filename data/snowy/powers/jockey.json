@@ -11,6 +11,9 @@
                 "type": "origins:passenger",
                 "inverted": true
             }
+        },
+        "item_condition": {
+            "type": "origins:empty"
         }
     },
     "dismount": {
@@ -23,13 +26,17 @@
         },
         "interval": 5,
         "condition": {
-            "type": "origins:riding",
-            "bientity_condition": {
-                "type": "origins:actor_condition",
-                "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
                     "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:passenger_recursive",
+                    "comparison": ">=",
+                    "compare_to": 1
                 }
-            }
+            ]
         }
     },
     "name": "Jockey",
