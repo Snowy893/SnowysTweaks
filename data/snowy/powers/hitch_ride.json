@@ -4,8 +4,11 @@
         "type": "origins:mount"
     },
     "bientity_condition": {
-        "type": "origins:entity_type",
-        "entity_type": "minecraft:player"
+        "type": "origins:target_condition",
+        "condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:player"
+        }
     },
     "item_condition": {
         "type": "origins:empty"
@@ -13,8 +16,5 @@
     "hands": [
         "main_hand"
     ],
-    "condition": {
-        "type": "origins:sneaking"
-    },
     "hidden": true
 }
