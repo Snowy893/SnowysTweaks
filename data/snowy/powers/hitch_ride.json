@@ -4,11 +4,8 @@
         "type": "origins:mount"
     },
     "bientity_condition": {
-        "type": "origins:target_condition",
-        "condition": {
-            "type": "origins:entity_type",
-            "entity_type": "minecraft:player"
-        }
+        "type": "origins:entity_type",
+        "entity_type": "minecraft:player"
     },
     "item_condition": {
         "type": "origins:empty"
