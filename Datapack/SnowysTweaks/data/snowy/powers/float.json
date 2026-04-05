@@ -1,0 +1,10 @@
+{
+    "type": "origins:modify_falling",
+    "velocity": 0.01,
+    "take_fall_damage": false,
+    "condition": {
+        "type": "origins:sneaking"
+    },
+    "name": "Float",
+    "description": "You can float in midair while crouching."
+}

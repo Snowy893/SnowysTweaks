@@ -1,0 +1,92 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:sneaking"
+                },
+                "if_action": {
+                    "type": "origins:raycast",
+                    "distance": 24,
+                    "block": true,
+                    "entity": true,
+                    "shape_type": "outline",
+                    "fluid_handling": "any",
+                    "bientity_action": {
+                        "type": "origins:add_velocity",
+                        "y": 0.5,
+                        "z": -2.0,
+                        "space": "local"
+                    },
+                    "hit_action": {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:block.mud.place",
+                        "volume": 1,
+                        "pitch": 0.8
+                    },
+                    "command_along_ray": "particle firework ~ ~ ~ 0.1 0.1 0.1 0 1 normal",
+                    "command_step": 0.1
+                },
+                "else_action": {
+                    "type": "origins:raycast",
+                    "distance": 24,
+                    "block": true,
+                    "entity": true,
+                    "shape_type": "outline",
+                    "fluid_handling": "any",
+                    "hit_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:add_velocity",
+                                "z": 1.0,
+                                "y": 0.45,
+                                "space": "local"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:block.mud.place",
+                                "volume": 1,
+                                "pitch": 0.8
+                            }
+                        ]
+                    },
+                    "command_along_ray": "particle firework ~ ~ ~ 0.1 0.1 0.1 0 1 normal",
+                    "command_step": 0.1
+                }
+            },
+            {
+                "type": "origins:exhaust",
+                "amount": 1
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.llama.spit",
+                "volume": 0.8,
+                "pitch": 0.7
+            }
+        ]
+    },
+    "cooldown": 80,
+    "hud_render": {
+        "bar_index": 3,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "should_render": true
+    },
+    "condition": {
+        "type": "origins:food_level",
+        "comparison": ">",
+        "compare_to": 6
+    },
+    "name": "Web Shot",
+    "description": "You can shoot your webs at blocks to pull yourself towards them.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Sneak to pull entities towards you!."
+        }
+    ]
+}
