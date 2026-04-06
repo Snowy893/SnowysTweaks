@@ -38,6 +38,10 @@
                 {
                     "type": "origins:exhaust",
                     "amount": 1
+                },
+                {
+                    "type": "origins:set_fall_distance",
+                    "fall_distance": 0
                 }
             ]
         },
