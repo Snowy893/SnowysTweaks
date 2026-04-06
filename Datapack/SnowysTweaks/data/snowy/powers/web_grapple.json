@@ -17,8 +17,8 @@
                     "fluid_handling": "any",
                     "bientity_action": {
                         "type": "origins:add_velocity",
-                        "y": 0.5,
-                        "z": -2.0,
+                        "y": 0.65,
+                        "z": -1.8,
                         "space": "local"
                     },
                     "hit_action": {
@@ -27,8 +27,9 @@
                         "volume": 1,
                         "pitch": 0.8
                     },
-                    "command_along_ray": "particle firework ~ ~ ~ 0.1 0.1 0.1 0 1 normal",
-                    "command_step": 0.1
+                    "command_along_ray": "particle firework ~ ~ ~ 0.05 0.05 0.05 0 1 normal",
+                    "command_at_hit": "particle firework ~ ~ ~ 0.09 0.09 0.09 0 9 normal",
+                    "command_step": 0.2
                 },
                 "else_action": {
                     "type": "origins:raycast",
@@ -54,8 +55,9 @@
                             }
                         ]
                     },
-                    "command_along_ray": "particle firework ~ ~ ~ 0.1 0.1 0.1 0 1 normal",
-                    "command_step": 0.1
+                    "command_along_ray": "particle firework ~ ~ ~ 0.05 0.05 0.05 0 1 normal",
+                    "command_at_hit": "particle firework ~ ~ ~ 0.09 0.09 0.09 0 9 normal",
+                    "command_step": 0.2
                 }
             },
             {
