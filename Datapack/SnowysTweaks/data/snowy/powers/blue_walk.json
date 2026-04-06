@@ -6,7 +6,7 @@
             {
                 "type": "origins:add_velocity",
                 "space": "local",
-                "z": 0.4,
+                "z": 0.5,
                 "client": true,
                 "server": true
             },
@@ -17,7 +17,7 @@
             {
                 "type": "origins:play_sound",
                 "sound": "minecraft:entity.dolphin.splash",
-                "volume": 1
+                "volume": 0.9
             },
             {
                 "type": "origins:exhaust",
@@ -49,9 +49,11 @@
         "continuous": false
     },
     "hud_render": {
+        "bar_index": 3,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
         "should_render": true
     },
-    "cooldown": 10,
+    "cooldown": 40,
     "name": "Blue Walk",
     "description": "Push off the water for a boost."
 }
