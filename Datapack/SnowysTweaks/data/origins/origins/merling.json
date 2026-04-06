@@ -2,8 +2,8 @@
     "loading_priority": 10,
     "powers": [
         "origins:water_breathing",
-        "origins:water_vision",
-        "snowy:aqua_affinity",
+        "snowy:water_vision",
+        "origins:aqua_affinity",
         "origins:swim_speed",
         "origins:like_water",
         "origins:aquatic",
