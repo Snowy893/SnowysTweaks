@@ -3,7 +3,7 @@
     "powers": [
         "origins:water_breathing",
         "origins:water_vision",
-        "origins:aqua_affinity",
+        "snowy:aqua_affinity",
         "origins:swim_speed",
         "origins:like_water",
         "origins:aquatic",
