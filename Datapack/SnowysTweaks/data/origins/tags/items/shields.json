@@ -4,6 +4,14 @@
         {
             "id": "goblins_tyranny:goblin_shield",
             "required": false
+        },
+        {
+            "id": "#c:shields",
+            "required": false
+        },
+        {
+            "id": "#forge:tools/shields",
+            "required": false
         }
     ]
 }
