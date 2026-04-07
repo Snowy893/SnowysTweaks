@@ -1,6 +1,6 @@
 {
     "powers": [
-        "origins:shulker_inventory"
+        "snowy:backpacker_inventory"
     ],
     "icon": "minecraft:bundle",
     "order": 34,

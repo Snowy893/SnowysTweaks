@@ -1,8 +1,8 @@
 {
     "loading_priority": 10,
     "powers": [
-        "origins:climbing",
-        "origins:master_of_webs",
+        "snowy:climbing_secondary",
+        "origwins:master_of_webs",
         "origins:carnivore",
         "origins:fragile",
         "origins:arthropod",
