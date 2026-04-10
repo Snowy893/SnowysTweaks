@@ -22,7 +22,7 @@
                         "type": "origins:block",
                         "block": "minecraft:air"
                     },
-                    "y": 1.5
+                    "y": 1
                 }
             }
         ]

@@ -1,0 +1,57 @@
+{
+	"type": "origins:active_self",
+	"key": {
+		"key": "key.use"
+	},
+	"cooldown": 10,
+	"name": "Arrow Catch",
+	"description": "Right clicking with an empty hand will allow you to catch arrows you look at.",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [{
+			"type": "origins:swing_hand"
+		},
+		{
+			"type": "origins:execute_command",
+			"command": "execute positioned ^ ^1.6 ^0.7 run data modify entity @e[type=arrow,distance=0..2,limit=1,sort=nearest] Motion set value -1",
+			"permission_level": 4
+		},
+		{
+			"type": "origins:execute_command",
+			"command": "execute positioned ^ ^1.6 ^0.7 run data modify entity @e[type=arrow,distance=0..2,limit=1,sort=nearest] pickup set value 1",
+			"permission_level": 4
+		},
+		{
+			"type": "origins:execute_command",
+			"command": "execute positioned ^ ^1.6 ^0.7 run data modify entity @e[type=arrow,distance=0..2,limit=1,sort=nearest] shake set value -1",
+			"permission_level": 4
+		},
+		{
+			"type": "origins:execute_command",
+			"command": "execute positioned ^ ^1.6 ^0.7 run data modify entity @e[type=arrow,distance=0..2,limit=1,sort=nearest] damage set value 0",
+			"permission_level": 4
+		},
+		{
+			"type": "origins:execute_command",
+			"command": "execute positioned ^ ^1.6 ^0.7 run data modify entity @e[type=arrow,distance=0..2,limit=1,sort=nearest] Silent set value 1",
+			"permission_level": 4
+		},
+		{
+			"type": "origins:execute_command",
+			"command": "execute positioned ^ ^1.6 ^0.7 run tp @e[type=arrow,distance=0..2,limit=1,sort=nearest] @s",
+			"permission_level": 4
+		},
+		{
+			"type": "origins:play_sound",
+			"sound": "entity.snowball.throw",
+			"pitch": 2
+		}]
+	},
+	"condition": {
+		"type": "origins:equipped_item",
+		"equipment_slot": "mainhand",
+		"item_condition": {
+			"type": "origins:empty"
+		}
+	}
+}

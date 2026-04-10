@@ -5,7 +5,7 @@
         "modifier": {
             "attribute": "minecraft:generic.movement_speed",
             "operation": "addition",
-            "value": 0.07,
+            "value": 0.085,
             "name": "Strider lava bonus"
         },
         "condition": {
