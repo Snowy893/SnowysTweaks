@@ -1,0 +1,9 @@
+{
+    "type": "origins:modify_air_speed",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 1.2
+    },
+    "name": "Air Time",
+    "description": "Your air speed is faster than average."
+}

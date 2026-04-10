@@ -1,0 +1,14 @@
+{
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:name",
+        "name": "fall"
+    },
+    "modifier": {
+        "name": "Less fall damage",
+        "operation": "multiply_base_multiplicative",
+        "value": -0.5
+    },
+    "name": "Acrobat",
+    "description": "You take less damage from falls."
+}

@@ -2,16 +2,17 @@
     "loading_priority": 10,
     "powers": [
         "snowy:climbing_secondary",
-        "origwins:master_of_webs",
+        "origins:master_of_webs",
+        "snowy:web_grapple",
+        "snowy:less_fall_damage",
         "origins:carnivore",
         "origins:fragile",
         "origins:arthropod",
-        "snowy:bad_swimmer",
-        "snowy:web_grapple"
+        "snowy:bad_swimmer"
     ],
     "icon": {
         "item": "minecraft:cobweb"
     },
     "order": 1,
-    "impact": 1
+    "impact": 2
 }

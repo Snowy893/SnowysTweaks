@@ -1,0 +1,17 @@
+{
+    "powers": [
+        "origins:fire_immunity",
+        "origins:nether_spawn",
+        "snowy:walk_on_lava",
+        "snowy:burning_speed",
+        "snowy:jockey",
+        "snowy:strider_jockey_sprint",
+        "origins:natural_armor",
+        "origins:water_vulnerability"
+    ],
+    "icon": "minecraft:warped_fungus_on_a_stick",
+    "order": 0,
+    "impact": 3,
+    "name": "Strider",
+    "description": ""
+}

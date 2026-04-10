@@ -1,0 +1,82 @@
+{
+    "type": "origins:multiple",
+    "speed": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "addition",
+            "value": 0.09,
+            "name": "Strider jockey bonus"
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_speed_toggle",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    "speed_toggle": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "over_time": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:if_else",
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_speed_toggle",
+                        "change": 1,
+                        "operation": "set"
+                    },
+                    {
+                        "type": "origins:passenger_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": {
+                                "type": "origins:equipped_item_action",
+                                "equipment_slot": "mainhand",
+                                "action": {
+                                    "type": "origins:consume",
+                                    "amount": 1
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "else_action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_speed_toggle",
+                "change": 0,
+                "operation": "set"
+            },
+            "condition": {
+                "type": "origins:passenger",
+                "bientity_condition": {
+                    "type": "origins:actor_condition",
+                    "condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "item": "minecraft:warped_fungus_on_a_stick"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "interval": 40
+    },
+    "name": "Strider Sprint",
+    "description": ""
+}

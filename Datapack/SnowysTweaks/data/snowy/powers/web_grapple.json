@@ -10,10 +10,10 @@
                 },
                 "if_action": {
                     "type": "origins:raycast",
-                    "distance": 24,
+                    "distance": 18,
                     "block": true,
                     "entity": true,
-                    "shape_type": "outline",
+                    "shape_type": "collider",
                     "fluid_handling": "any",
                     "bientity_action": {
                         "type": "origins:add_velocity",
@@ -33,10 +33,10 @@
                 },
                 "else_action": {
                     "type": "origins:raycast",
-                    "distance": 24,
+                    "distance": 18,
                     "block": true,
                     "entity": true,
-                    "shape_type": "outline",
+                    "shape_type": "collider",
                     "fluid_handling": "any",
                     "hit_action": {
                         "type": "origins:and",
@@ -88,7 +88,7 @@
     "badges": [
         {
             "sprite": "origins:textures/gui/badge/info.png",
-            "text": "Sneak to pull entities towards you!."
+            "text": "Sneak to pull entities towards you."
         }
     ]
 }

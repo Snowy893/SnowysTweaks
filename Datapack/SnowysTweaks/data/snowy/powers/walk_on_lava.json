@@ -1,0 +1,32 @@
+{
+    "type": "origins:walk_on_fluid",
+    "fluid": "minecraft:lava",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:sneaking",
+                "inverted": true
+            },
+            {
+                "type": "origins:fluid_height",
+                "fluid": "minecraft:lava",
+                "comparison": "<=",
+                "compare_to": 0.4
+            },
+            {
+                "type": "origins:in_block",
+                "block_condition": {
+                    "type": "origins:offset",
+                    "condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:air"
+                    },
+                    "y": 1.5
+                }
+            }
+        ]
+    },
+    "name": "Molten Step",
+    "description": "You can walk on lava."
+}

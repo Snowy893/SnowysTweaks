@@ -1,32 +1,9 @@
 {
     "type": "origins:multiple",
-    "jumps": {
+    "resource": {
         "type": "origins:resource",
         "min": 0,
-        "max": 3,
-        "start_value": 3,
-        "hud_render": {
-            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
-            "bar_index": 23,
-            "condition": {
-                "type": "origins:resource",
-                "resource": "*:*_jumps",
-                "comparison": "<",
-                "compare_to": 3
-            }
-        }
-    },
-    "restore": {
-        "type": "origins:action_over_time",
-        "entity_action": {
-            "type": "origins:change_resource",
-            "resource": "*:*_jumps",
-            "change": 100
-        },
-        "interval": 1,
-        "condition": {
-            "type": "origins:on_block"
-        }
+        "max": 100
     },
     "key_press": {
         "type": "origins:active_self",
@@ -73,8 +50,8 @@
             "conditions": [
                 {
                     "type": "origins:resource",
-                    "resource": "*:*_jumps",
-                    "comparison": ">",
+                    "resource": "*:*_resource",
+                    "comparison": "==",
                     "compare_to": 0
                 },
                 {
@@ -105,8 +82,30 @@
         "hud_render": {
             "should_render": false
         },
-        "cooldown": 8
+        "cooldown": 200
     },
-    "name": "Wing Flap",
-    "description": "Your wings aren't strong enough to fly, but they can still lift you a little. Jump in the air to propel yourself!"
+    "float": {
+        "type": "origins:modify_falling",
+        "velocity": -0.01,
+        "take_fall_damage": true,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    },
+    "cancel_fall_damage": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "fall"
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    }
 }

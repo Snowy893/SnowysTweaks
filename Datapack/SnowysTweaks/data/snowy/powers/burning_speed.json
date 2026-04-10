@@ -1,0 +1,33 @@
+{
+    "type": "origins:multiple",
+    "buff": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "addition",
+            "value": 0.07,
+            "name": "Strider lava bonus"
+        },
+        "condition": {
+            "type": "origins:in_block",
+            "block_condition": {
+                "type": "origins:fluid",
+                "fluid_condition": {
+                    "type": "origins:in_tag",
+                    "tag": "minecraft:lava"
+                }
+            }
+        }
+    },
+    "debuff": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "addition",
+            "value": -0.0075,
+            "name": "Strider lava bonus"
+        }
+    },
+    "name": "Burning Speed",
+    "description": "When on fire you move much faster. Otherwise, you move slower than average."
+}

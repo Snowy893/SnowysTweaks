@@ -1,0 +1,6 @@
+{
+    "type": "origins:prevent_game_event",
+    "event": "minecraft:step",
+    "name": "Quiet Steps",
+    "description": "Your footsteps don't cause any vibrations which could otherwise be picked up by nearby lifeforms."
+}

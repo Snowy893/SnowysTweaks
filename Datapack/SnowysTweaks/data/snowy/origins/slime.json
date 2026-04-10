@@ -1,0 +1,13 @@
+{
+    "powers": [
+        "snowy:bouncy",
+        "snowy:charged_leap",
+        "origins:more_exhaustion",
+        "snowy:hunted"
+    ],
+    "icon": "minecraft:slime_ball",
+    "order": 0,
+    "impact": 1,
+    "name": "Slime",
+    "description": ""
+}

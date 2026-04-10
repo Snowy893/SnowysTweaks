@@ -1,9 +1,22 @@
 {
-    "type": "origins:modify_falling",
-    "velocity": 0.1,
-    "take_fall_damage": false,
-    "condition": {
-        "type": "origins:sneaking"
+    "type": "origins:multiple",
+    "fall_speed": {
+        "type": "origins:modify_falling",
+        "velocity": 0.1,
+        "take_fall_damage": true,
+        "condition": {
+            "type": "origins:sneaking"
+        }
+    },
+    "cancel_fall_damage": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "fall"
+        },
+        "condition": {
+            "type": "origins:sneaking"
+        }
     },
     "name": "Breakfall",
     "description": "You can crouch to land safely and quickly."
