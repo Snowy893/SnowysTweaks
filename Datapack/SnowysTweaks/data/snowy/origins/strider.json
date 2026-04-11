@@ -4,10 +4,12 @@
         "origins:nether_spawn",
         "snowy:walk_on_lava",
         "snowy:burning_speed",
+        "snowy:lava_sight",
         "snowy:jockey",
         "snowy:strider_jockey_sprint",
         "origins:natural_armor",
-        "origins:water_vulnerability"
+        "origins:water_vulnerability",
+        "origins:damage_from_potions"
     ],
     "icon": "minecraft:warped_fungus_on_a_stick",
     "order": 0,

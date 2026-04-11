@@ -1,0 +1,205 @@
+{
+    "type": "origins:multiple",
+    "cooldown": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 900,
+        "hud_render": {
+            "bar_index": 3,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_cooldown",
+                "comparison": "<",
+                "compare_to": 900
+            }
+        },
+        "start_value": 900
+    },
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 100,
+        "min_action": {
+            "type": "origins:set_fall_distance",
+            "fall_distance": 0
+        },
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "key_press": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:delay",
+                    "ticks": 10,
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_resource",
+                                "change": 100
+                            },
+                            {
+                                "type": "origins:set_on_fire",
+                                "duration": 5
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:add_velocity",
+                    "space": "local_horizontal",
+                    "z": 0.3,
+                    "client": true,
+                    "server": true
+                },
+                {
+                    "type": "origins:add_velocity",
+                    "space": "world",
+                    "y": 0.9,
+                    "client": true,
+                    "server": true
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.llama.spit",
+                    "volume": 4,
+                    "pitch": 0.3
+                },
+                {
+                    "type": "origins:exhaust",
+                    "amount": 1
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_key_press"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_over_time",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:food_level",
+                    "comparison": ">",
+                    "compare_to": 6
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_resource",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_cooldown",
+                    "comparison": "==",
+                    "compare_to": 900
+                },
+                {
+                    "type": "origins:on_block",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "water"
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1,
+                    "inverted": true
+                },
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "lava"
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1,
+                    "inverted": true
+                },
+                {
+                    "type": "origins:in_rain",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "creative",
+                    "inverted": true
+                }
+            ]
+        },
+        "key": {
+            "key": "key.jump",
+            "continuous": false
+        },
+        "hud_render": {
+            "should_render": false
+        },
+        "cooldown": 300
+    },
+    "cooldown_over_time": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_cooldown",
+            "change": 20
+        },
+        "interval": 20
+    },
+    "over_time": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_resource",
+            "change": -20
+        },
+        "falling_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_cooldown",
+            "change": -1000
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "interval": 20
+    },
+    "float": {
+        "type": "origins:modify_falling",
+        "velocity": -0.05,
+        "take_fall_damage": true,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    },
+    "cancel_fall_damage": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "fall"
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    }
+}

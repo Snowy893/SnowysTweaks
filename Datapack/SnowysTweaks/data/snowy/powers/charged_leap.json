@@ -27,7 +27,7 @@
                 {
                     "type": "origins:change_resource",
                     "resource": "*:*_charge",
-                    "change": -10
+                    "change": -100
                 },
                 {
                     "type": "origins:exhaust",

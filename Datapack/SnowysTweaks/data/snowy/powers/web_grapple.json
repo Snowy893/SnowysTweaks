@@ -10,7 +10,7 @@
                 },
                 "if_action": {
                     "type": "origins:raycast",
-                    "distance": 18,
+                    "distance": 20,
                     "block": true,
                     "entity": true,
                     "shape_type": "collider",
@@ -33,7 +33,7 @@
                 },
                 "else_action": {
                     "type": "origins:raycast",
-                    "distance": 18,
+                    "distance": 20,
                     "block": true,
                     "entity": true,
                     "shape_type": "collider",

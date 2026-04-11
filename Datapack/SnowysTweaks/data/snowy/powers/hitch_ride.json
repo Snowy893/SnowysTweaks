@@ -6,8 +6,18 @@
     "bientity_condition": {
         "type": "origins:target_condition",
         "condition": {
-            "type": "origins:entity_type",
-            "entity_type": "minecraft:player"
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:player"
+                },
+                {
+                    "type": "origins:power",
+                    "power": "*:*",
+                    "inverted": true
+                }
+            ]
         }
     },
     "item_condition": {

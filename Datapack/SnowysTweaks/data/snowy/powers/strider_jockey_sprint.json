@@ -44,7 +44,7 @@
                                 "type": "origins:equipped_item_action",
                                 "equipment_slot": "mainhand",
                                 "action": {
-                                    "type": "origins:consume",
+                                    "type": "origins:damage",
                                     "amount": 1
                                 }
                             }
@@ -59,20 +59,28 @@
                 "operation": "set"
             },
             "condition": {
-                "type": "origins:passenger",
-                "bientity_condition": {
-                    "type": "origins:actor_condition",
-                    "condition": {
-                        "type": "origins:equipped_item",
-                        "equipment_slot": "mainhand",
-                        "item_condition": {
-                            "type": "origins:ingredient",
-                            "ingredient": {
-                                "item": "minecraft:warped_fungus_on_a_stick"
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:moving"
+                    },
+                    {
+                        "type": "origins:passenger",
+                        "bientity_condition": {
+                            "type": "origins:actor_condition",
+                            "condition": {
+                                "type": "origins:equipped_item",
+                                "equipment_slot": "mainhand",
+                                "item_condition": {
+                                    "type": "origins:ingredient",
+                                    "ingredient": {
+                                        "item": "minecraft:warped_fungus_on_a_stick"
+                                    }
+                                }
                             }
                         }
                     }
-                }
+                ]
             }
         },
         "interval": 40

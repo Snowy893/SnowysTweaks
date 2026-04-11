@@ -8,8 +8,24 @@
         "bientity_condition": {
             "type": "origins:target_condition",
             "condition": {
-                "type": "origins:passenger",
-                "inverted": true
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:passenger",
+                        "inverted": true
+                    },
+                    {
+                        "type": "origins:riding",
+                        "bientity_condition": {
+                            "type": "origins:actor_condition",
+                            "condition": {
+                                "type": "origins:entity_type",
+                                "entity_type": "minecraft:player"
+                            }
+                        },
+                        "inverted": true
+                    }
+                ]
             }
         },
         "item_condition": {
@@ -24,7 +40,7 @@
                 "type": "origins:dismount"
             }
         },
-        "interval": 5,
+        "interval": 20,
         "condition": {
             "type": "origins:and",
             "conditions": [

@@ -95,6 +95,11 @@
                     "type": "origins:food_level",
                     "comparison": ">",
                     "compare_to": 6
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "creative",
+                    "inverted": true
                 }
             ]
         },
