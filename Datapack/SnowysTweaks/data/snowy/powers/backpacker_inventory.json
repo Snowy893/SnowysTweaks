@@ -3,7 +3,7 @@
     "title": "container.shulker_inventory_power",
     "drop_on_death": false,
     "key": {
-        "key": "key.origins.tertiary_active",
+        "key": "key.origins.ternary_active",
         "continuous": false
     },
     "name": "Hoarder",
