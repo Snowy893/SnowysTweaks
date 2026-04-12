@@ -2,7 +2,7 @@
     "powers": [
         "snowy:tiny",
         "snowy:hitch_ride",
-        "snowy:quiet_steps",
+        "snowy:quiet_footsteps",
         "snowy:nimble",
         "snowy:less_exhaustion",
         "snowy:night_light",
@@ -13,5 +13,5 @@
     "order": 0,
     "impact": 3,
     "name": "Mothkin",
-    "description": "These small moths have lost their ability to fly."
+    "description": "These small moths have lost their ability to fly, but they still try!"
 }

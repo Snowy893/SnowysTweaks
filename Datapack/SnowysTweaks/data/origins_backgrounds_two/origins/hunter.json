@@ -2,7 +2,7 @@
     "loading_priority": 10,
     "powers": [
         "origins_backgrounds_two:bowmanship",
-        "snowy:arrow_catch"
+        "jdisaster:arrow_catch"
     ],
     "icon": "minecraft:bow",
     "order": 29,

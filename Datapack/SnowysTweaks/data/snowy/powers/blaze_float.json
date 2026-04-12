@@ -201,5 +201,7 @@
             "comparison": ">",
             "compare_to": 0
         }
-    }
+    },
+    "name": "Blaze of Glory",
+    "description": "Float for 5 seconds in the air."
 }

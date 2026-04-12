@@ -86,5 +86,11 @@
         "interval": 40
     },
     "name": "Strider Sprint",
-    "description": ""
+    "description": "What you would do for some warp fungus right now...",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "If you're being ridden by someone who is holding warped fungus on a stick, you'll move faster."
+        }
+    ]
 }

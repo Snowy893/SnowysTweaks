@@ -26,5 +26,6 @@
         ]
     },
     "name": "Wet Eyes",
-    "description": "Your vision underwater is perfect."
+    "description": "Your vision underwater is perfect.",
+    "hidden": true
 }
