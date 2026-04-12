@@ -33,21 +33,16 @@
             "type": "origins:and",
             "actions": [
                 {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_resource",
+                    "change": 100
+                },
+                {
                     "type": "origins:delay",
                     "ticks": 10,
                     "action": {
-                        "type": "origins:and",
-                        "actions": [
-                            {
-                                "type": "origins:change_resource",
-                                "resource": "*:*_resource",
-                                "change": 100
-                            },
-                            {
-                                "type": "origins:set_on_fire",
-                                "duration": 5
-                            }
-                        ]
+                        "type": "origins:set_on_fire",
+                        "duration": 4.5
                     }
                 },
                 {
@@ -55,14 +50,14 @@
                     "space": "local_horizontal",
                     "z": 0.3,
                     "client": true,
-                    "server": true
+                    "server": false
                 },
                 {
                     "type": "origins:add_velocity",
                     "space": "world",
                     "y": 0.9,
                     "client": true,
-                    "server": true
+                    "server": false
                 },
                 {
                     "type": "origins:play_sound",
@@ -72,22 +67,13 @@
                 },
                 {
                     "type": "origins:exhaust",
-                    "amount": 1
-                },
-                {
-                    "type": "origins:trigger_cooldown",
-                    "power": "*:*_key_press"
+                    "amount": 1.5
                 }
             ]
         },
         "condition": {
             "type": "origins:and",
             "conditions": [
-                {
-                    "type": "origins:power_active",
-                    "power": "*:*_over_time",
-                    "inverted": true
-                },
                 {
                     "type": "origins:food_level",
                     "comparison": ">",
@@ -202,6 +188,19 @@
             "compare_to": 0
         }
     },
+    "flame_arrow": {
+        "type": "origins:modify_projectile_damage",
+        "target_action": {
+            "type": "origins:set_on_fire",
+            "duration": 5
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:blaze_float_resource",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    },
     "name": "Blaze of Glory",
-    "description": "Float for 5 seconds in the air."
+    "description": "Float for 5 seconds in the air. For this duration, all projectiles you shoot will set your opponent on fire."
 }
