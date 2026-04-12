@@ -144,7 +144,7 @@
     "badges": [
         {
             "sprite": "origins:textures/gui/badge/info.png",
-            "text": "Crouch on the ground to charge the leap."
+            "text": "Crouch on the ground to charge."
         }
     ]
 }

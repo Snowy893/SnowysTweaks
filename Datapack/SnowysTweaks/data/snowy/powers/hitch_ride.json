@@ -31,8 +31,7 @@
         },
         "hands": [
             "main_hand"
-        ],
-        "hidden": true
+        ]
     },
     "over_time": {
         "type": "origins:action_over_time",
@@ -49,5 +48,6 @@
             }
         },
         "interval": 20
-    }
+    },
+    "hidden": true
 }

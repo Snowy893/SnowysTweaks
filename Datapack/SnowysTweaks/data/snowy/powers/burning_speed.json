@@ -29,5 +29,5 @@
         }
     },
     "name": "Burning Speed",
-    "description": "When on fire you move much faster. Otherwise, you move slower than average."
+    "description": "When on lava you move much faster. Otherwise, you move slower than average."
 }
