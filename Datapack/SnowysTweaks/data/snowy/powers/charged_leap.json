@@ -31,7 +31,7 @@
                 },
                 {
                     "type": "origins:exhaust",
-                    "amount": 1
+                    "amount": 0.5
                 }
             ]
         },
@@ -50,7 +50,7 @@
                     "type": "origins:resource",
                     "resource": "*:*_charge",
                     "comparison": ">=",
-                    "compare_to": 58
+                    "compare_to": 38
                 },
                 {
                     "type": "origins:on_block"
@@ -82,7 +82,7 @@
     "charge": {
         "type": "origins:resource",
         "min": 0,
-        "max": 60,
+        "max": 40,
         "hud_render": {
             "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
             "bar_index": 3,
