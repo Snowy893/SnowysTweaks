@@ -9,7 +9,8 @@
         "origins:aquatic",
         "origins:conduit_power_on_land",
         "origins:air_from_potions",
-        "snowy:blue_walk"
+        "snowy:blue_walk",
+        "snowy:torrential_wrath"
     ],
     "icon": {
         "item": "minecraft:cod"

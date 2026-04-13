@@ -2,7 +2,7 @@
     "type": "origins:modify_lava_speed",
     "modifier": {
         "operation": "addition",
-        "value": 0.2
+        "value": 0.22
     },
     "name": "Lava Swimmer",
     "description": "You can wade through lava faster."
