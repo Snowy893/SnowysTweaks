@@ -9,7 +9,8 @@
         "snowy:strider_jockey_sprint",
         "origins:natural_armor",
         "origins:water_vulnerability",
-        "origins:damage_from_potions"
+        "origins:damage_from_potions",
+        "snowy:nether_salad_immunity"
     ],
     "icon": "minecraft:warped_fungus_on_a_stick",
     "order": 0,

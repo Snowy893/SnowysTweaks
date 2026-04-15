@@ -1,20 +1,5 @@
 {
     "type": "origins:multiple",
-    "cooldown": {
-        "type": "origins:resource",
-        "min": 0,
-        "max": 900,
-        "hud_render": {
-            "bar_index": 3,
-            "condition": {
-                "type": "origins:resource",
-                "resource": "*:*_cooldown",
-                "comparison": "<",
-                "compare_to": 900
-            }
-        },
-        "start_value": 900
-    },
     "resource": {
         "type": "origins:resource",
         "min": 0,
@@ -48,14 +33,14 @@
                 {
                     "type": "origins:add_velocity",
                     "space": "local_horizontal",
-                    "z": 0.3,
+                    "z": 0.2,
                     "client": true,
                     "server": false
                 },
                 {
                     "type": "origins:add_velocity",
                     "space": "world",
-                    "y": 0.9,
+                    "y": 0.7,
                     "client": true,
                     "server": false
                 },
@@ -86,20 +71,14 @@
                     "compare_to": 0
                 },
                 {
-                    "type": "origins:resource",
-                    "resource": "*:*_cooldown",
-                    "comparison": "==",
-                    "compare_to": 900
-                },
-                {
                     "type": "origins:on_block",
                     "inverted": true
                 },
                 {
                     "type": "origins:in_block_anywhere",
                     "block_condition": {
-                        "type": "origins:block",
-                        "block": "water"
+                        "type": "origins:in_tag",
+                        "tag": "snowy:water_vulnerable_fluid"
                     },
                     "comparison": ">=",
                     "compare_to": 1,
@@ -118,11 +97,6 @@
                 {
                     "type": "origins:in_rain",
                     "inverted": true
-                },
-                {
-                    "type": "origins:gamemode",
-                    "gamemode": "creative",
-                    "inverted": true
                 }
             ]
         },
@@ -131,18 +105,10 @@
             "continuous": false
         },
         "hud_render": {
-            "should_render": false
+            "bar_index": 3,
+            "should_render": true
         },
-        "cooldown": 300
-    },
-    "cooldown_over_time": {
-        "type": "origins:action_over_time",
-        "entity_action": {
-            "type": "origins:change_resource",
-            "resource": "*:*_cooldown",
-            "change": 20
-        },
-        "interval": 20
+        "cooldown": 1000
     },
     "over_time": {
         "type": "origins:action_over_time",
@@ -150,11 +116,6 @@
             "type": "origins:change_resource",
             "resource": "*:*_resource",
             "change": -20
-        },
-        "falling_action": {
-            "type": "origins:change_resource",
-            "resource": "*:*_cooldown",
-            "change": -1000
         },
         "condition": {
             "type": "origins:resource",
@@ -196,7 +157,7 @@
         },
         "condition": {
             "type": "origins:resource",
-            "resource": "*:blaze_float_resource",
+            "resource": "*:*_resource",
             "comparison": ">",
             "compare_to": 0
         }

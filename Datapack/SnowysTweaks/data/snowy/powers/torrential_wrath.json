@@ -9,8 +9,8 @@
             {
                 "type": "origins:in_block_anywhere",
                 "block_condition": {
-                    "type": "origins:block",
-                    "block": "water"
+                    "type": "origins:in_tag",
+                    "tag": "snowy:water_vulnerable_fluid"
                 },
                 "comparison": ">=",
                 "compare_to": 1
