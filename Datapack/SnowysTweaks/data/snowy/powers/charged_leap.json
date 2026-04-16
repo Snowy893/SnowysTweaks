@@ -40,8 +40,8 @@
                 {
                     "type": "origins:resource",
                     "resource": "*:*_charge",
-                    "comparison": ">=",
-                    "compare_to": 38
+                    "comparison": "==",
+                    "compare_to": 40
                 },
                 {
                     "type": "origins:on_block"
@@ -163,7 +163,7 @@
                 "change": -100
             }
         },
-        "interval": 2
+        "interval": 10
     },
     "name": "Charged Leap",
     "description": "Leap into the air and bounce!",
