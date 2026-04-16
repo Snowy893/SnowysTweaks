@@ -12,17 +12,8 @@
             "actions": [
                 {
                     "type": "origins:change_resource",
-                    "resource": "*:*_air_speed_toggle",
-                    "change": 1
-                },
-                {
-                    "type": "origins:delay",
-                    "ticks": 120,
-                    "action": {
-                        "type": "origins:change_resource",
-                        "resource": "*:*_air_speed_toggle",
-                        "change": -1
-                    }
+                    "resource": "*:*_air_speed_resource",
+                    "change": 120
                 },
                 {
                     "type": "origins:change_resource",
@@ -58,13 +49,28 @@
             ]
         }
     },
-    "air_speed_toggle": {
+    "air_speed_resource": {
         "type": "origins:resource",
         "min": 0,
-        "max": 1,
+        "max": 120,
         "hud_render": {
             "should_render": false
         }
+    },
+    "air_speed_over_time": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_air_speed_resource",
+            "change": -20
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_air_speed_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "interval": 20
     },
     "air_speed": {
         "type": "origins:modify_air_speed",
@@ -74,9 +80,9 @@
         },
         "condition": {
             "type": "origins:resource",
-            "resource": "*:*_air_speed_toggle",
-            "comparison": "==",
-            "compare_to": 1
+            "resource": "*:*_air_speed_resource",
+            "comparison": ">",
+            "compare_to": 0
         }
     },
     "charge": {
@@ -123,6 +129,26 @@
                     },
                     {
                         "type": "origins:on_block"
+                    },
+                    {
+                        "type": "origins:in_block_anywhere",
+                        "block_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "snowy:water_vulnerable_fluid"
+                        },
+                        "comparison": ">=",
+                        "compare_to": 1,
+                        "inverted": true
+                    },
+                    {
+                        "type": "origins:in_block_anywhere",
+                        "block_condition": {
+                            "type": "origins:block",
+                            "block": "lava"
+                        },
+                        "comparison": ">=",
+                        "compare_to": 1,
+                        "inverted": true
                     }
                 ]
             },
