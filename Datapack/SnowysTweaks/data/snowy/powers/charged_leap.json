@@ -85,6 +85,56 @@
             "compare_to": 0
         }
     },
+    "key_press": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:sneaking"
+                    },
+                    {
+                        "type": "origins:food_level",
+                        "comparison": ">",
+                        "compare_to": 6
+                    },
+                    {
+                        "type": "origins:on_block"
+                    },
+                    {
+                        "type": "origins:in_block_anywhere",
+                        "block_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "snowy:fluid"
+                        },
+                        "comparison": ">=",
+                        "compare_to": 1,
+                        "inverted": true
+                    }
+                ]
+            },
+            "if_action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_charge",
+                "change": 2
+            },
+            "else_action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_charge",
+                "change": -100
+            }
+        },
+        "cooldown": 2,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.sneak",
+            "continuous": true
+        }
+    },
     "charge": {
         "type": "origins:resource",
         "min": 0,
@@ -116,44 +166,6 @@
                 ]
             }
         }
-    },
-    "charge_over_time": {
-        "type": "origins:action_over_time",
-        "entity_action": {
-            "type": "origins:if_else",
-            "condition": {
-                "type": "origins:and",
-                "conditions": [
-                    {
-                        "type": "origins:sneaking"
-                    },
-                    {
-                        "type": "origins:on_block"
-                    },
-                    {
-                        "type": "origins:in_block_anywhere",
-                        "block_condition": {
-                            "type": "origins:in_tag",
-                            "tag": "snowy:fluid"
-                        },
-                        "comparison": ">=",
-                        "compare_to": 1,
-                        "inverted": true
-                    }
-                ]
-            },
-            "if_action": {
-                "type": "origins:change_resource",
-                "resource": "*:*_charge",
-                "change": 2
-            },
-            "else_action": {
-                "type": "origins:change_resource",
-                "resource": "*:*_charge",
-                "change": -100
-            }
-        },
-        "interval": 10
     },
     "name": "Charged Leap",
     "description": "Leap into the air and bounce!",
