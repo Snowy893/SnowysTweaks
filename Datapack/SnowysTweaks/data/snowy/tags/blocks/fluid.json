@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:water",
+        "minecraft:lava",
+        {
+            "id": "#c:water",
+            "required": false
+        },
+        {
+            "id": "biomesoplenty:blood",
+            "required": false
+        }
+    ]
+}
