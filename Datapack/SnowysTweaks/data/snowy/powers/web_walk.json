@@ -1,0 +1,22 @@
+{
+    "type": "origins:grounded",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:sneaking",
+                "inverted": true
+            },
+            {
+                "type": "origins:in_block_anywhere",
+                "block_condition": {
+                    "type": "origins:in_tag",
+                    "tag": "snowy:webs"
+                },
+                "comparison": ">=",
+                "compare_to": 1
+            }
+        ]
+    },
+    "hidden": true
+}

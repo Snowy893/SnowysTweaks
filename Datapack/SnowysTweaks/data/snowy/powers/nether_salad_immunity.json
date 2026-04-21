@@ -1,16 +1,12 @@
 {
-    "type": "origins:action_on_item_use",
-    "entity_action": {
-        "type": "origins:clear_effect",
-        "effect": "minecraft:nausea"
-    },
+    "type": "origins:modify_food",
     "item_condition": {
         "type": "origins:ingredient",
         "ingredient": {
             "item": "farmersdelight:nether_salad"
         }
     },
-    "hidden": false,
+    "prevent_effects": true,
     "name": "Hellish Palate",
     "description": "You don't get sick from eating nether salad."
 }

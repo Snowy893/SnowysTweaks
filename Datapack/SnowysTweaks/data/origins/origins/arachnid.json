@@ -8,7 +8,8 @@
         "origins:carnivore",
         "origins:fragile",
         "origins:arthropod",
-        "snowy:bad_swimmer"
+        "snowy:bad_swimmer",
+        "snowy:web_walk"
     ],
     "icon": {
         "item": "minecraft:cobweb"

@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "values": [
+        "#origins:cobwebs",
+        {
+            "id": "biomesoplenty:webbing",
+            "required": false
+        }
+    ]
+}
