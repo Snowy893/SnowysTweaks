@@ -5,14 +5,14 @@
     "allow_random": true,
     "origins": [
         "origins_backgrounds:acolyte",
-        "origins_backgrounds:guard",
-        "origins_backgrounds:cultist",
         "origins_backgrounds:cryptkeeper",
-        "origins_backgrounds_two:hunter",
-        "origins_backgrounds_two:miner",
+        "origins_backgrounds:cultist",
+        "origins_backgrounds:guard",
+        "origins_backgrounds_two:angler",
         "origins_backgrounds_two:blacksmith",
         "origins_backgrounds_two:disenchanter",
-        "origins_backgrounds_two:angler",
+        "origins_backgrounds_two:hunter",
+        "origins_backgrounds_two:miner",
         "snowy:backpacker"
     ]
 }

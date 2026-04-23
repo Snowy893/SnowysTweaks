@@ -3,7 +3,6 @@
     "powers": [
         "snowy:raycast_tp",
         "origins:pumpkin_hate",
-        "snowy:passive_enderman",
         "origins:extra_reach",
         "origins:damage_from_potions",
         "origins:water_vulnerability"
