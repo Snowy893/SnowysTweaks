@@ -1,0 +1,10 @@
+{
+    "replace": true,
+    "order": 20,
+    "enabled": true,
+    "allow_random": false,
+    "origins": [
+        "snowy:descendian"
+    ],
+    "name": "life"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "origins:phasing",
+    "block_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:block",
+                "block": "biomesoplenty:high_grass"
+            },
+            {
+                "type": "origins:block",
+                "block": "biomesoplenty:high_grass_plant"
+            }
+        ]
+    },
+    "hidden": true
+}

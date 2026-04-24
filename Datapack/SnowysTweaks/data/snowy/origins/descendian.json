@@ -1,0 +1,10 @@
+{
+    "powers": [
+        "snowy:high_grass_phasing"
+    ],
+    "icon": "cataclysm:abyss_eye",
+    "order": 1,
+    "impact": 3,
+    "name": "Descendian",
+    "description": "Do you accept the terms of this world?"
+}
