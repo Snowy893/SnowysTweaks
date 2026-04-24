@@ -36,6 +36,17 @@ ServerEvents.recipes(event => {
             item: 'hearthandharvest:salt'
         }
     })
+    event.custom({
+        type: 'hexalia:mortar_and_pestle',
+        ingredients: [
+            {
+                item: 'minecraft:blaze_powder'
+            }
+        ],
+        output: {
+            item: 'sulfar_mod:sulfar'
+        }
+    })
 })
 
 LootJS.modifiers(event =>
