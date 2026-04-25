@@ -11,8 +11,8 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'projectvibrantjourneys:cindercane_to_blaze_powder' })
 
     event.forEachRecipe({ type: 'minecraft:crafting_shape', input: 'hexalia:mortar_and_pestle' }, recipe => {
-        var ingredients = recipe.originalRecipeIngredients
-        var output = recipe.originalRecipeResult
+        let ingredients = recipe.originalRecipeIngredients
+        let output = recipe.originalRecipeResult
 
         event.shaped(output, ingredients)
             .replaceIngredient('hexalia:salt', 'hearthandharvest:salt')
@@ -22,8 +22,8 @@ ServerEvents.recipes(event => {
     })
 
     event.forEachRecipe({ type: 'minecraft:crafting_shapeless', input: 'hexalia:mortar_and_pestle' }, recipe => {
-        var ingredients = recipe.originalRecipeIngredients
-        var output = recipe.originalRecipeResult
+        let ingredients = recipe.originalRecipeIngredients
+        let output = recipe.originalRecipeResult
 
         event.shapeless(output, ingredients)
             .replaceIngredient('hexalia:salt', 'hearthandharvest:salt')
