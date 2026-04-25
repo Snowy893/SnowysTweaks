@@ -8,6 +8,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'hexalia:salt' })
     event.remove({ id: 'hexalia:salt_from_mortar' })
     event.remove({ id: 'workstations:coking/quartz' })
+    event.remove({ id: 'projectvibrantjourneys:cindercane_to_blaze_powder' })
 
     event.forEachRecipe({ type: 'minecraft:crafting_shape', input: 'hexalia:mortar_and_pestle' }, recipe => {
         var ingredients = recipe.originalRecipeIngredients
@@ -53,6 +54,9 @@ ServerEvents.recipes(event => {
         { item: 'hearthandharvest:syrup_bottle' },
         { item: 'hearthandharvest:syrup_bottle' },
     ]).id('hearthandharvest:syrup_bottle_crate')
+
+    event.smelting('sulfar_mod:sulfar', 'projectvibrantjourneys:cindercane', 0.3, 600)
+        .id('sulfar_mod:kjs/cindercane_to_sulfar')
 
     event.custom({
         type: 'farmersdelight:cooking',
