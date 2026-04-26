@@ -1,0 +1,48 @@
+{
+    "type": "origins:multiple",
+    "attribute": {
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "name": "Extra Reach block reach",
+                "attribute": "reach-entity-attributes:reach",
+                "value": 1,
+                "operation": "addition"
+            },
+            {
+                "name": "Extra Reach entity reach",
+                "attribute": "reach-entity-attributes:attack_range",
+                "value": 0.25,
+                "operation": "addition"
+            }
+        ],
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "friendsandfoes:crab_claw"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "friendsandfoes:crab_claw"
+                        }
+                    }
+                }
+            ]
+        },
+        "tick_rate": 1,
+        "update_health": false
+    },
+    "hidden": true
+}
