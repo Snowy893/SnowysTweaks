@@ -13,6 +13,15 @@
                 "fluid": "minecraft:lava",
                 "comparison": "<=",
                 "compare_to": 0.4
+            },
+            {
+                "type": "origins:in_block_anywhere",
+                "block_condition": {
+                    "type": "origins:block",
+                    "block": "minecraft:air"
+                },
+                "comparison": ">=",
+                "compare_to": 1
             }
         ]
     },

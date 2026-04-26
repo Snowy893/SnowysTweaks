@@ -28,6 +28,38 @@
             "name": "Strider lava bonus"
         }
     },
+    "jump_help": {
+        "type": "origins:modify_jump",
+        "modifier": {
+            "name": "Bonus jump force for getting out of lava",
+            "value": 0.2,
+            "operation": "add_base_late"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_buff"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": 0.1,
+                            "offset_z": 0.1
+                        },
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": -0.1,
+                            "offset_z": -0.1
+                        }
+                    ]
+                }
+            ]
+        }
+    },
     "name": "Burning Speed",
     "description": "When on lava you move much faster. Otherwise, you move slower than average."
 }
