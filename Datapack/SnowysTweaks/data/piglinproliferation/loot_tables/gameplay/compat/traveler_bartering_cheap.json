@@ -212,6 +212,20 @@
                             "add": false
                         }
                     ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 80,
+                    "name": "projectvibrantjourneys:glowcap",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 4
+                            }
+                        }
+                    ]
                 }
             ]
         }
