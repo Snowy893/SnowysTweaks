@@ -129,6 +129,38 @@
             },
             "trigger": "minecraft:location"
         },
+        "biomesoplenty:visceral_heap": {
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "location": {
+                                "biome": "biomesoplenty:visceral_heap"
+                            }
+                        }
+                    }
+                ]
+            },
+            "trigger": "minecraft:location"
+        },
+        "biomesoplenty:withered_abyss": {
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "location": {
+                                "biome": "biomesoplenty:withered_abyss"
+                            }
+                        }
+                    }
+                ]
+            },
+            "trigger": "minecraft:location"
+        },
         "gardens_of_the_dead:soulblight_forest": {
             "conditions": {
                 "player": [
