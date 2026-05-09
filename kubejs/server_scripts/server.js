@@ -38,6 +38,7 @@ ServerEvents.recipes(event => {
     // Remake the mortar and pestle crafting table recipes such that the mortar and pestle isn't lost on crafting
     ["shaped", "shapeless"].forEach(type => {
         event.forEachRecipe({ type: "minecraft:crafting_" + type, input: "hexalia:mortar_and_pestle" }, recipe => {
+            // Eeverse the order so that mortar and pestle appears first in the recipe
             let ingredients = recipe.getOriginalRecipeIngredients().reversed().toArray();
             let output = recipe.originalRecipeResult;
 
