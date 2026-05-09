@@ -1,11 +1,12 @@
 {
 	"format_version": "1.21.6",
-	"credit": "Made with Blockbench",
+	"credit": "Made by Snowy893",
 	"parent": "block/thin_block",
 	"render_type": "minecraft:cutout",
 	"texture_size": [32, 32],
 	"textures": {
-		"1": "projectvibrantjourneys:block/bark_mushroom"
+		"1": "projectvibrantjourneys:block/bark_mushroom",
+		"particle": "projectvibrantjourneys:block/bark_mushroom"
 	},
 	"elements": [
 		{
@@ -104,7 +105,8 @@
 			"translation": [3.75, -1.5, 1]
 		},
 		"ground": {
-			"translation": [0, 0, 6.5]
+			"translation": [0, 0, 6.5],
+			"scale": [0.7, 0.7, 0.7]
 		},
 		"gui": {
 			"rotation": [18.21, -29.29, -13.46],
@@ -115,7 +117,7 @@
 			"translation": [14.25, 0.5, 0]
 		},
 		"fixed": {
-			"rotation": [180, 0, 180],
+			"rotation": [-180, 0, -180],
 			"translation": [0, 0, -6.75]
 		}
 	}
