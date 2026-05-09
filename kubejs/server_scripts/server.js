@@ -19,8 +19,7 @@ let crushedHerbs = [];
 
 ServerEvents.tags("item", event => {
     event.get("hexalia:crushed_herbs").getObjectIds().forEach(id =>
-        crushedHerbs.push(Item.of(id))
-    );
+        crushedHerbs.push(Item.of(id)));
 });
 
 ServerEvents.recipes(event => {
@@ -61,20 +60,6 @@ ServerEvents.recipes(event => {
         { item: "sulfar_mod:sulfar" },
     ]).id("sulfar_mod:fire_charge_sulfar_recipe");
 
-    event.shaped("cataclysm:cursed_eye",
-        [
-            "GBG",
-            "PEP",
-            "GRG",
-        ],
-        {
-            G: "minecraft:gold_ingot",
-            B: "minecraft:bone_block",
-            P: "minecraft:phantom_membrane",
-            R: "minecraft:rotten_flesh",
-        },
-    ).id("cataclysm:cursed_eye");
-
     event.shapeless("hearthandharvest:syrup_crate", [
         { item: "hearthandharvest:syrup_bottle" },
         { item: "hearthandharvest:syrup_bottle" },
@@ -87,10 +72,10 @@ ServerEvents.recipes(event => {
         { item: "hearthandharvest:syrup_bottle" },
     ]).id("hearthandharvest:kjs/syrup_crate");
 
-    event.smelting("sulfar_mod:sulfar", "projectvibrantjourneys:cindercane", 0.3, 200)
+    event.smelting("sulfar_mod:sulfar", "projectvibrantjourneys:cindercane", 1.0, 200)
         .id("sulfar_mod:kjs/sulfar_from_smelting_cindercane");
 
-    event.smelting("sulfar_mod:sulfar", "sulfar_mod:nether_sulfar_ore", 0.3, 200)
+    event.smelting("sulfar_mod:sulfar", "sulfar_mod:nether_sulfar_ore", 1.0, 200)
         .id("sulfar_mod:kjs/sulfar_from_smelting_nether_sulfar_ore");
 
     event.custom({
@@ -150,7 +135,12 @@ ServerEvents.recipes(event => {
     mortarAndPestleRecipe(event, "minecraft:sugar", { item: "minecraft:sugar_cane" });
     mortarAndPestleRecipe(event, "minecraft:flint", { item: "minecraft:gravel" });
     mortarAndPestleRecipe(event, "minecraft:glowstone_dust", { item: "projectvibrantjourneys:glowcap" });
-    mortarAndPestleRecipe(event, "minecraft:phantom_membrane", crushedHerbs);
+
+    event.custom({
+        type: "hexalia:ritual_table",
+        ingredients: [{ item: "hexalia:air_node" }].concat(crushedHerbs),
+        output: { item: "minecraft:phantom_membrane" }
+    });
 });
 
 LootJS.modifiers(event =>
