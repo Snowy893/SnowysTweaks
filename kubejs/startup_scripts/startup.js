@@ -2,6 +2,11 @@ ItemEvents.modification(event => {
     event.modify("sulfar_mod:sulfar_block", item => item.burnTime = 20000);
     event.modify("hexalia:mortar_and_pestle", item => item.maxStackSize = 1);
     event.modify("friendsandfoes:crab_claw", item => item.maxStackSize = 1);
+    event.modify("whaleborne:anchor", item => item.maxStackSize = 16);
+    event.modify("whaleborne:cannon", item => item.maxStackSize = 16);
+    event.modify("whaleborne:helm", item => item.maxStackSize = 16);
+    event.modify("whaleborne:mast", item => item.maxStackSize = 16);
+    event.modify("whaleborne:sail", item => item.maxStackSize = 16);
 });
 
 MoreJSEvents.registerPotionBrewing(event => {
