@@ -34,6 +34,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: "workstations:coking/quartz" });
     event.remove({ id: "projectvibrantjourneys:cindercane_to_blaze_powder" });
     event.remove({ id: "projectvibrantjourneys:glowcap_to_glowstone_dust" });
+    event.remove({ id: "winteroverhaul:skates" });
 
     // Remake the mortar and pestle crafting table recipes such that the mortar and pestle isn't lost on crafting
     ["shaped", "shapeless"].forEach(type => {
@@ -78,6 +79,9 @@ ServerEvents.recipes(event => {
 
     event.smelting("sulfar_mod:sulfar", "sulfar_mod:nether_sulfar_ore", 1.0, 200)
         .id("sulfar_mod:kjs/sulfar_from_smelting_nether_sulfar_ore");
+
+    event.smithing("winteroverhaul:skates", "minecraft:string", "minecraft:leather_boots", "minecraft:iron_ingot")
+        .id("winteroverhaul:kjs/skates_from_smithing_table");
 
     event.custom({
         type: "farmersdelight:cooking",
