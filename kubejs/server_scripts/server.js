@@ -128,4 +128,23 @@ ServerEvents.recipes(event => {
 LootJS.modifiers(event =>
     event.addBlockLootModifier("hexalia:salt_block").replaceLoot("hexalia:salt", "hearthandharvest:salt", true));
 
+let overworldBiomes;
+
+ServerEvents.tags('worldgen/biome', event => {
+    overworldBiomes = event.get("minecraft:is_overworld")
+        .objectIds
+        .toArray()
+        .filter(value => !value.includes("minecraft:" && !value.includes("terrablender:")));
+});
+
+AdvJSEvents.advancement(event => {
+    let exploreAllBiomes = event.get("minecraft:adventure/adventuring_time");
+    overworldBiomes.forEach(biome => {
+        exploreAllBiomes.modifyCriteria(builder => {
+            builder.add(biome, event.TRIGGER.location(triggerBuilder =>
+                triggerBuilder.locationByPredicate.biome.getPath() === biome));
+        });
+    });
+});
+
 console.info("Loaded Snowy's Server Tweaks");
