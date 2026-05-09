@@ -1,6 +1,6 @@
 {
 	"format_version": "1.21.6",
-	"credit": "Made with Blockbench",
+	"credit": "Made by Snowy893",
 	"parent": "block/thin_block",
 	"render_type": "minecraft:cutout",
 	"elements": [
