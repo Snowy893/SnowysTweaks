@@ -1,0 +1,8 @@
+{
+    "parent": "projectvibrantjourneys:block/bark_mushroom",
+    "render_type": "minecraft:cutout",
+    "textures": {
+        "1": "projectvibrantjourneys:block/glowing_blue_fungus",
+        "particle": "projectvibrantjourneys:block/glowing_blue_fungus"
+    }
+}
