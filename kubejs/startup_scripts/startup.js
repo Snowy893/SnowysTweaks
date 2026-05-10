@@ -6,8 +6,8 @@ ItemEvents.modification(event => {
     event.modify("minecraft:splash_potion", item => item.maxStackSize = 4);
     event.modify("minecraft:lingering_potion", item => item.maxStackSize = 4);
 
-    ["anchor", "cannon", "helm", "mast", "sail"].forEach(equipable => {
-        event.modify("whaleborne:" + equipable, item => item.maxStackSize = 16);
+    ["anchor", "cannon", "helm", "mast", "sail"].forEach(equippable => {
+        event.modify("whaleborne:" + equippable, item => item.maxStackSize = 16);
     });
 });
 
