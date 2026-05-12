@@ -32,7 +32,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: "projectvibrantjourneys:cindercane_to_blaze_powder" });
     event.remove({ id: "projectvibrantjourneys:glowcap_to_glowstone_dust" });
     event.remove({ id: "winteroverhaul:skates" });
-    event.remove({ id: "hearthandharvest:cotton_candy" })
+    event.remove({ id: "hearthandharvest:cotton_candy" });
 
     // Remake the mortar and pestle crafting table recipes such that the mortar and pestle isn't lost on crafting
     ["shaped", "shapeless"].forEach(type => {
@@ -91,7 +91,7 @@ ServerEvents.recipes(event => {
 
     event.custom({
         type: "farmersdelight:cooking",
-        container: "minecraft:bucket",
+        container: { item: "minecraft:bucket" },
         cookingtime: 100,
         experience: 0.35,
         ingredients: [{ item: "biomesoplenty:porous_flesh" }],
