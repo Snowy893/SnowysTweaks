@@ -116,8 +116,8 @@
         },
         "type": "origins:modify_falling",
         "velocity": 0.01,
-        "take_fall_damage": false,
-        "name": "Climbing",
-        "description": "You are able to climb up any kind of wall, not just ladders."
-    }
+        "take_fall_damage": false
+    },
+    "name": "Climbing",
+    "description": "You are able to climb up any kind of wall, not just ladders."
 }

@@ -1,0 +1,68 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:gain_air",
+        "value": 50
+    },
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:swimming",
+                        "inverted": true
+                    },
+                    {
+                        "type": "origins:in_block",
+                        "block_condition": {
+                            "type": "origins:offset",
+                            "condition": {
+                                "type": "origins:block",
+                                "block": "biomesoplenty:blood"
+                            },
+                            "y": 1.35
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:swimming"
+                    },
+                    {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:in_block",
+                                "block_condition": {
+                                    "type": "origins:offset",
+                                    "condition": {
+                                        "type": "origins:block",
+                                        "block": "biomesoplenty:blood"
+                                    }
+                                }
+                            },
+                            {
+                                "type": "origins:in_block",
+                                "block_condition": {
+                                    "type": "origins:offset",
+                                    "condition": {
+                                        "type": "origins:block",
+                                        "block": "biomesoplenty:blood"
+                                    },
+                                    "y": 1
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "interval": 5,
+    "hidden": true
+}
