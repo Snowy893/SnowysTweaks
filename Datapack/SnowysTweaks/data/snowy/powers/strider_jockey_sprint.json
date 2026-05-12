@@ -85,34 +85,6 @@
         },
         "interval": 40
     },
-    "overlay": {
-        "type": "origins:overlay",
-        "texture": "minecraft:textures/misc/nausea.png",
-        "strength": 0.25,
-        "red": 0.1294,
-        "green": 0.8275,
-        "blue": 0.8863,
-        "draw_mode": "nausea",
-        "draw_phase": "above_hud",
-        "hide_with_hud": true,
-        "visible_in_third_person": true,
-        "condition": {
-            "type": "origins:passenger",
-            "bientity_condition": {
-                "type": "origins:actor_condition",
-                "condition": {
-                    "type": "origins:equipped_item",
-                    "equipment_slot": "mainhand",
-                    "item_condition": {
-                        "type": "origins:ingredient",
-                        "ingredient": {
-                            "item": "minecraft:warped_fungus_on_a_stick"
-                        }
-                    }
-                }
-            }
-        }
-    },
     "name": "Strider Sprint",
     "description": "What you would do for some warped fungus right now...",
     "badges": [
