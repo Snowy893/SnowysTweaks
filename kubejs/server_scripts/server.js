@@ -17,24 +17,22 @@ function mortarAndPestleRecipe(event, output, ingredients) {
 
 let crushedHerbs = [];
 
-ServerEvents.tags("item", event => {
-    event.get("hexalia:crushed_herbs").getObjectIds().forEach(id =>
-        crushedHerbs.push(Item.of(id)));
-});
+ServerEvents.tags("item", event =>
+    event.get("hexalia:crushed_herbs").getObjectIds().forEach(id => crushedHerbs.push(Item.of(id))));
 
 ServerEvents.recipes(event => {
     event.remove({ id: "minecraft:lead" });
     event.remove({ id: "minecraft:lodestone" });
     event.remove({ id: "minecraft:powered_rail" });
-    event.remove({ id: "minecraft:blaze_powder" });
-    event.remove({ id: "minecraft:sugar_from_sugar_cane" });
     event.remove({ id: "sulfar_mod:blaze_powder_sulfar_recipe" });
     event.remove({ id: "hexalia:salt" });
     event.remove({ id: "hexalia:salt_from_mortar" });
+    event.remove({ id: "hexalia:leather_from_salt" });
     event.remove({ id: "workstations:coking/quartz" });
     event.remove({ id: "projectvibrantjourneys:cindercane_to_blaze_powder" });
     event.remove({ id: "projectvibrantjourneys:glowcap_to_glowstone_dust" });
     event.remove({ id: "winteroverhaul:skates" });
+    event.remove({ id: "hearthandharvest:cotton_candy" })
 
     // Remake the mortar and pestle crafting table recipes such that the mortar and pestle isn't lost on crafting
     ["shaped", "shapeless"].forEach(type => {
@@ -44,16 +42,12 @@ ServerEvents.recipes(event => {
             let output = recipe.originalRecipeResult;
 
             event[type](output, ingredients)
-                .replaceIngredient("hexalia:salt", "hearthandharvest:salt")
                 .keepIngredient("hexalia:mortar_and_pestle")
-                .id(recipe.getId())
-                .replaceOutput("hexalia:salt", "hearthandharvest:salt");
+                .id(recipe.getId());
         });
     });
 
     event.replaceInput({ output: "farmersdelight:fried_egg" }, "minecraft:egg", "#c:eggs");
-    event.replaceInput({ input: "hexalia:salt" }, "hexalia:salt", "hearthandharvest:salt");
-    event.replaceOutput({ output: "hexalia:salt" }, "hexalia:salt", "hearthandharvest:salt");
 
     event.shapeless("minecraft:fire_charge", [
         { item: "sulfar_mod:sulfar" },
@@ -136,16 +130,35 @@ ServerEvents.recipes(event => {
     });
 
     mortarAndPestleRecipe(event, Item.of("sulfar_mod:sulfar", 2), { item: "minecraft:blaze_powder" });
-    mortarAndPestleRecipe(event, Item.of("minecraft:blaze_powder", 2), { item: "minecraft:blaze_rod" });
-    mortarAndPestleRecipe(event, "minecraft:sugar", { item: "minecraft:sugar_cane" });
     mortarAndPestleRecipe(event, "minecraft:flint", { item: "minecraft:gravel" });
     mortarAndPestleRecipe(event, "minecraft:glowstone_dust", { item: "projectvibrantjourneys:glowcap" });
+    mortarAndPestleRecipe(event, "hearthandharvest:cotton_candy", [
+        { item: "minecraft:stick" },
+        { item: "hearthandharvest:cotton" },
+        { item: "minecraft:sugar" },
+    ]);
+    mortarAndPestleRecipe(event, Item.of("hexalia:salt", 2), [
+        { item: "hearthandharvest:salt" },
+        { tag: "hexalia:crushed_herbs" },
+    ]);
 
     event.custom({
         type: "hexalia:ritual_table",
         ingredients: [{ item: "hexalia:air_node" }].concat(crushedHerbs),
         output: { item: "minecraft:phantom_membrane" }
     });
+
+    event.custom({
+        type: "hexalia:ritual_table",
+        ingredients: [
+            { item: "minecraft:rotten_flesh" },
+            { item: "hearthandharvest:salt" },
+            { item: "hearthandharvest:salt" },
+            { item: "hearthandharvest:salt" },
+            { item: "hearthandharvest:salt" },
+        ],
+        output: { item: "minecraft:leather" }
+    }).id("hexalia:kjs/leather_from_salt_ritual_table");
 });
 
 LootJS.modifiers(event =>
