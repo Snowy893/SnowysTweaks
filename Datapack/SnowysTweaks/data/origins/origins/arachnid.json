@@ -1,7 +1,7 @@
 {
     "loading_priority": 10,
     "powers": [
-        "snowy:climbing_secondary",
+        "toroic:climbing",
         "origins:master_of_webs",
         "snowy:web_grapple",
         "origins:fall_immunity",

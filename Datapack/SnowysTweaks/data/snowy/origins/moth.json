@@ -7,7 +7,7 @@
         "snowy:less_exhaustion",
         "snowy:night_light",
         "snowy:geppo",
-        "origins:climbing"
+        "toroic:climbing"
     ],
     "icon": "minecraft:lantern",
     "order": 0,

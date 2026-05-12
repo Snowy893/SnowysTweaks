@@ -1,0 +1,123 @@
+{
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": true,
+        "key": {
+            "key": "key.origins.secondary_active",
+            "continuous": false
+        },
+        "retain_state": true
+    },
+    "climb_up": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": 0.1,
+                            "offset_y": 0,
+                            "offset_z": 0.1
+                        },
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": -0.1,
+                            "offset_y": 0,
+                            "offset_z": -0.1
+                        },
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": 0.1,
+                            "offset_y": 0,
+                            "offset_z": -0.1
+                        },
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": -0.1,
+                            "offset_y": 0,
+                            "offset_z": 0.1
+                        },
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": 0.1,
+                            "offset_y": 0.1,
+                            "offset_z": 0.1
+                        },
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": -0.1,
+                            "offset_y": 0.1,
+                            "offset_z": -0.1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                }
+            ]
+        },
+        "type": "origins:climbing",
+        "allow_holding": true
+    },
+    "climb_down": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": 0.1,
+                            "offset_y": 0,
+                            "offset_z": 0.1
+                        },
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": -0.1,
+                            "offset_y": 0,
+                            "offset_z": -0.1
+                        },
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": 0.1,
+                            "offset_y": 0,
+                            "offset_z": -0.1
+                        },
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": -0.1,
+                            "offset_y": 0,
+                            "offset_z": 0.1
+                        },
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": 0.1,
+                            "offset_y": 0.1,
+                            "offset_z": 0.1
+                        },
+                        {
+                            "type": "origins:block_collision",
+                            "offset_x": -0.1,
+                            "offset_y": 0.1,
+                            "offset_z": -0.1
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                }
+            ]
+        },
+        "type": "origins:modify_falling",
+        "velocity": 0.01,
+        "take_fall_damage": false,
+        "name": "Climbing",
+        "description": "You are able to climb up any kind of wall, not just ladders."
+    }
+}
