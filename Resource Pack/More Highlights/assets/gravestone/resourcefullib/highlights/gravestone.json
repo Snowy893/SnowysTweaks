@@ -1,0 +1,23 @@
+{
+    "variants": {
+        "facing=south": "gravestone:gravestone_shape",
+        "facing=north": {
+            "highlight": "gravestone:gravestone_shape",
+            "rotation": {
+                "y": 180
+            }
+        },
+        "facing=west": {
+            "highlight": "gravestone:gravestone_shape",
+            "rotation": {
+                "y": 90
+            }
+        },
+        "facing=east": {
+            "highlight": "gravestone:gravestone_shape",
+            "rotation": {
+                "y": 270
+            }
+        }
+    }
+}

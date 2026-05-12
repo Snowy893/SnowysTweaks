@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "half=lower": {
+            "highlight": "waystones:portstone_shape"
+        },
+        "half=upper": {
+            "highlight": "waystones:portstone_shape",
+            "translation": [0, -1, 0]
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": "waystones:warp_plate_shape",
+        "facing=north": "waystones:warp_plate_shape",
+        "facing=west": "waystones:warp_plate_shape",
+        "facing=east": "waystones:warp_plate_shape"
+    }
+}

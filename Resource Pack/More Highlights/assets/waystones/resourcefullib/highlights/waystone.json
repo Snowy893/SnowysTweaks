@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "half=lower": {
+            "highlight": "waystones:waystone_shape"
+        },
+        "half=upper": {
+            "highlight": "waystones:waystone_shape",
+            "translation": [0, -1, 0]
+        }
+    }
+}
