@@ -75,9 +75,18 @@
             }
         },
         "condition": {
-            "type": "origins:food_level",
-            "comparison": ">",
-            "compare_to": 6
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:food_level",
+                    "comparison": ">",
+                    "compare_to": 6
+                },
+                {
+                    "type": "origins:riding",
+                    "inverted": true
+                }
+            ]
         }
     },
     "deplete": {

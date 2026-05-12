@@ -62,6 +62,10 @@
                 "type": "origins:and",
                 "conditions": [
                     {
+                        "type": "origins:riding",
+                        "inverted": true
+                    },
+                    {
                         "type": "origins:moving"
                     },
                     {

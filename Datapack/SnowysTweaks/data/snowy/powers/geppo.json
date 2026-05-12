@@ -100,6 +100,10 @@
                     "type": "origins:gamemode",
                     "gamemode": "creative",
                     "inverted": true
+                },
+                {
+                    "type": "origins:riding",
+                    "inverted": true
                 }
             ]
         },

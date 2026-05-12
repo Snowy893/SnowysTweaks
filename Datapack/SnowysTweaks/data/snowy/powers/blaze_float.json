@@ -97,6 +97,10 @@
                 {
                     "type": "origins:in_rain",
                     "inverted": true
+                },
+                {
+                    "type": "origins:riding",
+                    "inverted": true
                 }
             ]
         },

@@ -9,6 +9,10 @@
                 "inverted": true
             },
             {
+                "type": "origins:riding",
+                "inverted": true
+            },
+            {
                 "type": "origins:fluid_height",
                 "fluid": "minecraft:lava",
                 "comparison": "<=",

@@ -57,6 +57,10 @@
                     "resource": "*:*_tp_resource",
                     "comparison": ">=",
                     "compare_to": 10
+                },
+                {
+                    "type": "origins:riding",
+                    "inverted": true
                 }
             ]
         },
