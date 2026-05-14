@@ -1,0 +1,465 @@
+{
+    "parent": "exposure:adventure/exposure",
+    "criteria": {
+        "minecraft:axolotl": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:axolotl" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:bat": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:bat" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:bee": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:bee" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:camel": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:camel" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:dolphin": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:dolphin" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:fox": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:bee" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:frog": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:frog" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:glow_squid": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:glow_squid" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:goat": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:goat" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:llama": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:llama" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:ocelot": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:ocelot" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:panda": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:panda" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:parrot": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:parrot" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:polar_bear": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:polar_bear" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:rabbit": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:rabbit" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:sniffer": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:sniffer" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:squid": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:squid" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:turtle": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:turtle" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "minecraft:wolf": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "minecraft:wolf" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "hexalia:silk_moth": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "hexalia:silk_moth" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "hexalia:cacofey": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "hexalia:cacofey" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:alligator": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:alligator" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:bear": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:bear" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:boar": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:boar" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:butterfly": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:butterfly" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:caterpillar": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:caterpillar" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:coral_snake": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:coral_snake" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:deer": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:deer" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:dragonfly": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:dragonfly" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:duck": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:duck" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:elephant": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:elephant" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:firefly": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:firefly" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:giraffe": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:giraffe" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:hippo": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:hippo" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:lion": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:lion" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:lizard": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:lizard" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:rattlesnake": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:rattlesnake" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:rhino": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:rhino" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:snake": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:snake" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:tortoise": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:tortoise" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:vulture": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:vulture" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "naturalist:zebra": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "naturalist:zebra" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "friendsandfoes:crab": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "friendsandfoes:crab" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "friendsandfoes:glare": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "friendsandfoes:glare" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "friendsandfoes:mauler": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "friendsandfoes:mauler" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "friendsandfoes:moobloom": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "friendsandfoes:moobloom" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "friendsandfoes:rascal": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "friendsandfoes:rascal" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "snowpig:snow_pig": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "snowpig:snow_pig" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
+        "winteroverhaul:robin": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "winteroverhaul:robin" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        }
+    },
+    "display": {
+        "announce_to_chat": true,
+        "description": {
+            "translate": "advancement.exposure.wildlife_archivist.description"
+        },
+        "frame": "task",
+        "hidden": false,
+        "icon": {
+            "item": "minecraft:axolotl_bucket"
+        },
+        "show_toast": true,
+        "title": {
+            "translate": "advancement.exposure.wildlife_archivist.title"
+        }
+    },
+    "requirements": [
+        ["minecraft:polar_bear"],
+        ["minecraft:bat"],
+        ["minecraft:fox"],
+        ["minecraft:llama"],
+        ["minecraft:frog"],
+        ["minecraft:turtle"],
+        ["minecraft:squid"],
+        ["minecraft:glow_squid"],
+        ["minecraft:sniffer"],
+        ["minecraft:ocelot"],
+        ["minecraft:parrot"],
+        ["minecraft:goat"],
+        ["minecraft:camel"],
+        ["minecraft:dolphin"],
+        ["minecraft:wolf"],
+        ["minecraft:panda"],
+        ["minecraft:rabbit"],
+        ["minecraft:bee"],
+        ["minecraft:axolotl"],
+        ["hexalia:silk_moth"],
+        ["hexalia:cacofey"],
+        ["naturalist:alligator"],
+        ["naturalist:bear"],
+        ["naturalist:boar"],
+        ["naturalist:butterfly"],
+        ["naturalist:caterpillar"],
+        ["naturalist:coral_snake"],
+        ["naturalist:deer"],
+        ["naturalist:dragonfly"],
+        ["naturalist:duck"],
+        ["naturalist:elephant"],
+        ["naturalist:firefly"],
+        ["naturalist:giraffe"],
+        ["naturalist:hippo"],
+        ["naturalist:lion"],
+        ["naturalist:lizard"],
+        ["naturalist:rattlesnake"],
+        ["naturalist:rhino"],
+        ["naturalist:snake"],
+        ["naturalist:tortoise"],
+        ["naturalist:vulture"],
+        ["naturalist:zebra"],
+        ["whaleborne:hullback"],
+        ["friendsandfoes:crab"],
+        ["friendsandfoes:glare"],
+        ["friendsandfoes:mauler"],
+        ["friendsandfoes:moobloom"],
+        ["friendsandfoes:rascal"],
+        ["snowpig:snow_pig"],
+        ["winteroverhaul:robin"]
+    ],
+    "sends_telemetry_event": true
+}
