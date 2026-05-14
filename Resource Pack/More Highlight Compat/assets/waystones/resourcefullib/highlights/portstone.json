@@ -1,10 +1,47 @@
 {
     "variants": {
-        "half=lower": {
-            "highlight": "waystones:portstone_shape"
-        },
-        "half=upper": {
+        "facing=south,half=lower": "waystones:portstone_shape",
+        "facing=north,half=lower": {
             "highlight": "waystones:portstone_shape",
+            "rotation": {
+                "y": 180
+            }
+        },
+        "facing=west,half=lower": {
+            "highlight": "waystones:portstone_shape",
+            "rotation": {
+                "y": 90
+            }
+        },
+        "facing=east,half=lower": {
+            "highlight": "waystones:portstone_shape",
+            "rotation": {
+                "y": 270
+            }
+        },
+        "facing=south,half=upper": {
+            "highlight": "waystones:portstone_shape",
+            "translation": [0, -1, 0]
+        },
+        "facing=north,half=upper": {
+            "highlight": "waystones:portstone_shape",
+            "rotation": {
+                "y": 180
+            },
+            "translation": [0, -1, 0]
+        },
+        "facing=west,half=upper": {
+            "highlight": "waystones:portstone_shape",
+            "rotation": {
+                "y": 90
+            },
+            "translation": [0, -1, 0]
+        },
+        "facing=east,half=upper": {
+            "highlight": "waystones:portstone_shape",
+            "rotation": {
+                "y": 270
+            },
             "translation": [0, -1, 0]
         }
     }

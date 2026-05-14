@@ -1,0 +1,23 @@
+{
+    "variants": {
+        "facing=south": "sawmill:sawmill_shape",
+        "facing=north": {
+            "highlight": "sawmill:sawmill_shape",
+            "rotation": {
+                "y": 180
+            }
+        },
+        "facing=west": {
+            "highlight": "sawmill:sawmill_shape",
+            "rotation": {
+                "y": 90
+            }
+        },
+        "facing=east": {
+            "highlight": "sawmill:sawmill_shape",
+            "rotation": {
+                "y": 270
+            }
+        }
+    }
+}
