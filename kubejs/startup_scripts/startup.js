@@ -34,11 +34,21 @@ ItemEvents.modification(event => {
         event.modify(wood + "_chest_boat", item => item.maxStackSize = 4);
     });
     event.modify("minecraft:saddle", item => item.maxStackSize = 16);
-    event.modify("sulfar_mod:sulfar_block", item => item.burnTime = 20000);
     event.modify("hexalia:mortar_and_pestle", item => item.maxStackSize = 1);
     event.modify("friendsandfoes:crab_claw", item => item.maxStackSize = 1);
     ["anchor", "cannon", "helm", "mast", "sail"].forEach(equippable =>
         event.modify("whaleborne:" + equippable, item => item.maxStackSize = 16));
+
+    event.modify("sulfar_mod:sulfar_block", item => item.burnTime = 20000);
+
+    event.modify("minecraft:fishing_rod", item => item.maxDamage = 64*2);
+    event.modify("tide:stone_fishing_rod", item => item.maxDamage = 96*2);
+    event.modify("tide:iron_fishing_rod", item => item.maxDamage = 128*2);
+    event.modify("tide:golden_fishing_rod", item => item.maxDamage = 72*2);
+    event.modify("tide:crystal_fishing_rod", item => item.maxDamage = 160*2);
+    event.modify("tide:diamond_fishing_rod", item => item.maxDamage = 256*2);
+    // event.modify("tide:netherite_fishing_rod", item => item.maxDamage = 1024*2);
+    event.modify("tide:midas_fishing_rod", item => item.maxDamage = 512*1.5);
 });
 
 ItemAttributes.modify(attributes => {
