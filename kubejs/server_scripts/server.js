@@ -26,6 +26,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: "minecraft:powered_rail" });
     event.remove({ id: "sulfar_mod:blaze_powder_sulfar_recipe" });
     event.remove({ id: "hexalia:salt" });
+    event.remove({ id: "hexalia:salt_block" });
     event.remove({ id: "hexalia:salt_from_mortar" });
     event.remove({ id: "hexalia:leather_from_salt" });
     event.remove({ id: "workstations:coking/quartz" });
@@ -67,6 +68,10 @@ ServerEvents.recipes(event => {
         { item: "hearthandharvest:syrup_bottle" },
         { item: "hearthandharvest:syrup_bottle" },
     ]).id("hearthandharvest:kjs/syrup_crate");
+
+    event.shapeless(Item.of("hearthandharvest:salt", 9), [
+        { item: "hexalia:salt_block" }
+    ]);
 
     event.smelting("sulfar_mod:sulfar", "projectvibrantjourneys:cindercane", 1.0, 200)
         .id("sulfar_mod:kjs/sulfar_from_smelting_cindercane");
@@ -159,6 +164,13 @@ ServerEvents.recipes(event => {
         ],
         output: { item: "minecraft:leather" }
     }).id("hexalia:kjs/leather_from_salt_ritual_table");
+});
+
+const potions = ["minecraft:splash_potion", "minecraft:lingering_potion"]
+
+ItemEvents.rightClicked(potions, event => {
+    event.server.scheduleInTicks(1, () =>
+        potions.forEach(potion => event.player.addItemCooldown(potion, 30)));
 });
 
 LootJS.modifiers(event =>
