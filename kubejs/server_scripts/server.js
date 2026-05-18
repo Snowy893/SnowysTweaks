@@ -71,7 +71,7 @@ ServerEvents.recipes(event => {
 
     event.shapeless(Item.of("hearthandharvest:salt", 9), [
         { item: "hexalia:salt_block" }
-    ]);
+    ]).id("hexalia:kjs/salt_block");
 
     event.smelting("sulfar_mod:sulfar", "projectvibrantjourneys:cindercane", 1.0, 200)
         .id("sulfar_mod:kjs/sulfar_from_smelting_cindercane");
