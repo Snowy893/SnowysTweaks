@@ -225,5 +225,11 @@
         }
     },
     "name": "Blaze of Glory",
-    "description": "Float for 5 seconds in the air. For this duration, all projectiles you shoot will set your opponent on fire."
+    "description": "Float for 5 seconds in the air.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Cancelled early when you sneak or are extinguished."
+        }
+    ]
 }

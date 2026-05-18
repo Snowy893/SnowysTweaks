@@ -7,11 +7,11 @@
         "snowy:lava_swimmer",
         "snowy:lava_sight",
         "snowy:blaze_float",
-        "origins:damage_from_snowballs",
-        "origins:damage_from_potions",
-        "origins:water_vulnerability",
+        "snowy:nether_salad_immunity",
         "snowy:weak_while_freezing",
-        "snowy:nether_salad_immunity"
+        "origins:water_vulnerability",
+        "origins:damage_from_snowballs",
+        "origins:damage_from_potions"
     ],
     "icon": {
         "item": "minecraft:blaze_powder"
