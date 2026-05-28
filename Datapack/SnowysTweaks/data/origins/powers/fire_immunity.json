@@ -1,0 +1,16 @@
+{
+    "loading_priority": 10,
+    "type": "origins:invulnerability",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:fire"
+            },
+            {
+                "type": "origins:type",
+                "damage_type": "farmersdelight:stove_burn"
+            }
+        ]
+    }
+}
