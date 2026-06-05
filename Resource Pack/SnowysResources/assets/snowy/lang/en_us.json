@@ -3,5 +3,7 @@
     "advancements.adventure.kill_crab.description": "Obtain a Crab Claw. Hold it to increase your reach!",
     "itemGroup.sophisticatedcore": "Sophisticated Core",
     "subtitles.entity.wolf.bark": "Wolf Barks",
-    "subtitles.entity.wolf.pant": "Wolf Pants"
+    "subtitles.entity.wolf.pant": "Wolf Pants",
+    "itemGroup.notenoughwands": "Not Enough Wands",
+    "death.attack.cataclysm.maledictio_sagitta.item": "%s was cursed by %s 's Arrow"
 }
