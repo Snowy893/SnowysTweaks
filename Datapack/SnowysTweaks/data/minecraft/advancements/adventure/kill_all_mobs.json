@@ -771,14 +771,14 @@
             },
             "trigger": "minecraft:player_killed_entity"
         },
-        "cataclysm:kobelediator": {
+        "cataclysm:kobolediator": {
             "conditions": {
                 "entity": [
                     {
                         "condition": "minecraft:entity_properties",
                         "entity": "this",
                         "predicate": {
-                            "type": "cataclysm:kobelediator"
+                            "type": "cataclysm:kobolediator"
                         }
                     }
                 ]
@@ -1194,7 +1194,7 @@
         ["cataclysm:lionfish"],
         ["cataclysm:amethyst_crab"],
         ["cataclysm:ancient_remnant"],
-        ["cataclysm:kobelediator"],
+        ["cataclysm:kobolediator"],
         ["cataclysm:wadjet"],
         ["cataclysm:koboleton"],
         ["cataclysm:maledictus"],

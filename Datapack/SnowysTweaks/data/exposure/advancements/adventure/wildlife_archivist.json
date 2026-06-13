@@ -337,6 +337,14 @@
             },
             "trigger": "exposure:frame_exposed"
         },
+        "whaleborne:hullback": {
+            "conditions": {
+                "frame": {
+                    "entities_in_frame": [{ "type": "whaleborne:hullback" }]
+                }
+            },
+            "trigger": "exposure:frame_exposed"
+        },
         "friendsandfoes:crab": {
             "conditions": {
                 "frame": {
