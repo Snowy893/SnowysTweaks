@@ -2,7 +2,7 @@
   "parent": "projectvibrantjourneys:block/rocks4",
   "render_type": "minecraft:cutout",
   "textures": {
-    "particle": "cataclysm:block/pointed_icicle",
-    "0": "cataclysm:block/pointed_icicle"
+    "particle": "cataclysm:block/pointed_icicle_down_base",
+    "0": "cataclysm:block/pointed_icicle_down_base"
   }
 }
