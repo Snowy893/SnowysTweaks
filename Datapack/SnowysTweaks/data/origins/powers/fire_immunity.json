@@ -8,8 +8,17 @@
                 "type": "origins:fire"
             },
             {
-                "type": "origins:type",
-                "damage_type": "farmersdelight:stove_burn"
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:name",
+                        "name": "farmersdelight.stove"
+                    },
+                    {
+                        "type": "origins:name",
+                        "name": "farmersdelight.stove.player"
+                    }
+                ]
             }
         ]
     }
