@@ -34,13 +34,9 @@ ServerEvents.recipes(event => {
     event.remove({ id: "projectvibrantjourneys:glowcap_to_glowstone_dust" });
     event.remove({ id: "winteroverhaul:skates" });
     event.remove({ id: "hearthandharvest:cotton_candy" });
-    event.remove({ id: "notenoughwands:building_wand" });
-    event.remove({ id: "notenoughwands:moving_wand" });
-    event.remove({ id: "notenoughwands:displacement_wand" });
-    event.remove({ id: "notenoughwands:swapping_wand" });
 
     // Remake the mortar and pestle crafting table recipes such that the mortar and pestle isn't lost on crafting
-    ["shaped", "shapeless"].forEach(type => 
+    ["shaped", "shapeless"].forEach(type =>
         event.forEachRecipe({ type: "minecraft:crafting_" + type, input: "hexalia:mortar_and_pestle" }, recipe => {
             // Eeverse the order so that mortar and pestle appears first in the recipe
             let ingredients = recipe.getOriginalRecipeIngredients().reversed().toArray();
@@ -75,62 +71,6 @@ ServerEvents.recipes(event => {
     event.shapeless(Item.of("hearthandharvest:salt", 9), [
         { item: "hexalia:salt_block" }
     ]).id("hexalia:kjs/salt_block");
-
-    event.shaped("notenoughwands:building_wand",
-        [
-            "CB ",
-            "BC ",
-            "  D"
-        ],
-        {
-            C: "endermanoverhaul:corrupted_pearl",
-            B: "minecraft:brick_block",
-            C: "notenoughwands:wand_core",
-            D: "minecraft:diamond"
-        }
-    ).id("notenoughwands:kjs/building_wand");
-
-    event.shaped("notenoughwands:moving_wand",
-        [
-            "PR ",
-            "RC ",
-            "  D"
-        ],
-        {
-            P: "endermanoverhaul:summoner_pearl",
-            R: "minecraft:redstone_block",
-            C: "notenoughwands:wand_core",
-            D: "minecraft:diamond"
-        }
-    ).id("notenoughwands:kjs/moving_wand");
-
-    event.shaped("notenoughwands:displacement_wand",
-        [
-            "PR ",
-            "RC ",
-            "  D"
-        ],
-        {
-            P: "endermanoverhaul:summoner_pearl",
-            R: "minecraft:amethyst_block",
-            C: "notenoughwands:wand_core",
-            D: "minecraft:diamond"
-        }
-    ).id("notenoughwands:kjs/displacement_wand");
-
-    event.shaped("notenoughwands:swapping_wand",
-        [
-            "PR ",
-            "RC ",
-            "  D"
-        ],
-        {
-            P: "endermanoverhaul:soul_pearl",
-            R: "minecraft:glowstone_block",
-            C: "notenoughwands:wand_core",
-            D: "minecraft:diamond"
-        }
-    ).id("notenoughwands:kjs/swapping_wand");
 
     event.smelting("sulfar_mod:sulfar", "projectvibrantjourneys:cindercane", 1.0, 200)
         .id("sulfar_mod:kjs/sulfar_from_smelting_cindercane");
