@@ -953,14 +953,14 @@
             },
             "trigger": "minecraft:player_killed_entity"
         },
-        "cataclysm:octohost": {
+        "cataclysm:drowned_host": {
             "conditions": {
                 "entity": [
                     {
                         "condition": "minecraft:entity_properties",
                         "entity": "this",
                         "predicate": {
-                            "type": "cataclysm:octohost"
+                            "type": "cataclysm:drowned_host"
                         }
                     }
                 ]
@@ -1023,14 +1023,14 @@
             },
             "trigger": "minecraft:player_killed_entity"
         },
-        "friendsandfoes:illusioner": {
+        "minecraft:illusioner": {
             "conditions": {
                 "entity": [
                     {
                         "condition": "minecraft:entity_properties",
                         "entity": "this",
                         "predicate": {
-                            "type": "friendsandfoes:illusioner"
+                            "type": "minecraft:illusioner"
                         }
                     }
                 ]
@@ -1203,15 +1203,17 @@
             "cataclysm:elite_draugr",
             "cataclysm:royal_draugr",
             "cataclysm:draugr",
+            "cataclysm:scylla",
             "cataclysm:clawdian",
             "cataclysm:hippocamtus",
+            "cataclysm:cindaria",
             "cataclysm:urchinkin",
-            "cataclysm:octohost",
+            "cataclysm:drowned_host",
             "cataclysm:symbiocto",
             "piglinproliferation:piglin_alchemist",
             "piglinproliferation:piglin_traveler",
             "friendsandfoes:iceologer",
-            "friendsandfoes:illusioner",
+            "minecraft:illusioner",
             "friendsandfoes:wildfire",
             "variantsandventures:gelid",
             "variantsandventures:murk",

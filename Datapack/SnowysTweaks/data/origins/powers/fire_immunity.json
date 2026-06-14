@@ -8,17 +8,8 @@
                 "type": "origins:fire"
             },
             {
-                "type": "origins:or",
-                "conditions": [
-                    {
-                        "type": "origins:name",
-                        "name": "farmersdelight.stove"
-                    },
-                    {
-                        "type": "origins:name",
-                        "name": "farmersdelight.stove.player"
-                    }
-                ]
+                "type": "origins:name",
+                "name": "farmersdelight.stove"
             }
         ]
     }
