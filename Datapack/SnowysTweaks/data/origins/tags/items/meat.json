@@ -15,6 +15,8 @@
         "#minecraft:is_meat",
         "#tide:cookable_fish",
         "cataclysm:lionfish",
+        "farmersdelight:bacon_and_eggs",
+        "farmersdelight:bacon_sandwich",
         "farmersdelight:baked_cod_stew",
         "farmersdelight:barbecue_stick",
         "farmersdelight:chicken_sandwich",
