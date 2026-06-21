@@ -1,0 +1,9 @@
+{
+    "type": "forge:add_features",
+    "biomes": "nullscape:crystal_peaks",
+    "features": [
+        "biomesoplenty:blackstone_spines",
+        "biomesoplenty:blackstone_bulbs"
+    ],
+    "decoration": "vegetal_decoration"
+}
