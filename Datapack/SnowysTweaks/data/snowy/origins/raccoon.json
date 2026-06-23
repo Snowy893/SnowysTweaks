@@ -4,7 +4,8 @@
         "snowy:hunted",
         "snowy:refined_palate",
         "snowy:spit",
-        "origins:cat_vision"
+        "origins:cat_vision",
+        "snowy:wall_hold"
     ],
     "icon": "minecraft:rotten_flesh",
     "order": 4,
