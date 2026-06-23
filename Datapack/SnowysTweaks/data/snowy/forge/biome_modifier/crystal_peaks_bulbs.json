@@ -5,5 +5,5 @@
         "biomesoplenty:blackstone_spines",
         "biomesoplenty:blackstone_bulbs"
     ],
-    "decoration": "vegetal_decoration"
+    "step": "vegetal_decoration"
 }
