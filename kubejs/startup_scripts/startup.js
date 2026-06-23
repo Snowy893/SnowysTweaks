@@ -59,4 +59,9 @@ ItemAttributes.modify(attributes => {
     });
 });
 
+MoreJSEvents.registerPotionBrewing(event => {
+    event.removeByPotion(null, null, "additionaladditions:haste_potion");
+    event.addPotionBrewing("minecraft:golden_apple", "minecraft:awkward", "additionaladditions:haste_potion");
+});
+
 console.info("Loaded Snowy's Startup Tweaks");

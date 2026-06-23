@@ -1,5 +1,5 @@
 /**
- * @param {Internal.RecipeJS} event 
+ * @param {Internal.RecipeJS} event
  * @param {string|Internal.ItemStack} output
  * @param {Internal.Ingredient|Internal.Ingredient[]} ingredients
  */
@@ -12,6 +12,70 @@ function mortarAndPestleRecipe(event, output, ingredients) {
         type: "hexalia:mortar_and_pestle",
         ingredients: ingredientsArray,
         output: outputItem
+    });
+}
+
+/**
+ * @param {Internal.RecipeJS} event
+ * @param {string} ore
+ * @param {string} ingot
+ * @param {number} bonus1
+ * @param {number} bonus2
+ * @param {number} bonus3
+ */
+function alloySmelterOreRecipe(event, ore, ingot, bonus1, bonus2, bonus3) {
+    event.custom({
+        type: "alloy_smelter:smelting",
+        ingredients: [
+            { item: ore },
+            { item: ore },
+            { item: ore },
+            { item: ore },
+            { item: ore },
+        ],
+        result: {
+            item: ingot,
+            count: 5 + bonus1,
+        },
+        smeltingTime: 400,
+        fuelPerTick: 1,
+        requiredTier: 1,
+    });
+
+    event.custom({
+        type: "alloy_smelter:smelting",
+        ingredients: [
+            { item: ore },
+            { item: ore },
+            { item: ore },
+            { item: ore },
+            { item: ore },
+        ],
+        result: {
+            item: ingot,
+            count: 5 + bonus2,
+        },
+        smeltingTime: 320,
+        fuelPerTick: 1,
+        requiredTier: 2,
+    });
+
+    event.custom({
+        type: "alloy_smelter:smelting",
+        ingredients: [
+            { item: ore },
+            { item: ore },
+            { item: ore },
+            { item: ore },
+            { item: ore },
+        ],
+        result: {
+            item: ingot,
+            count: 5 + bonus3,
+        },
+        smeltingTime: 240,
+        fuelPerTick: 1,
+        requiredTier: 3,
     });
 }
 
@@ -34,11 +98,20 @@ ServerEvents.recipes(event => {
     event.remove({ id: "projectvibrantjourneys:glowcap_to_glowstone_dust" });
     event.remove({ id: "winteroverhaul:skates" });
     event.remove({ id: "hearthandharvest:cotton_candy" });
+    ["copper", "gold", "iron"].forEach(ingot => {
+        event.remove({ id: "alloy_smelter:smelting/tier1/" + ingot + "_ingot" });
+        event.remove({ id: "alloy_smelter:smelting/tier1/double_" + ingot + "_ingot" });
+        event.remove({ id: "alloy_smelter:smelting/tier2/" + ingot + "_ingot" });
+        event.remove({ id: "alloy_smelter:smelting/tier2/double_" + ingot + "_ingot" });
+        event.remove({ id: "alloy_smelter:smelting/tier3/" + ingot + "_ingot" });
+        event.remove({ id: "alloy_smelter:smelting/tier3/double_" + ingot + "_ingot" });
+    });
+    event.remove({ id: "ring_of_enderchest:ring_of_enderchest" });
 
     // Remake the mortar and pestle crafting table recipes such that the mortar and pestle isn't lost on crafting
     ["shaped", "shapeless"].forEach(type =>
         event.forEachRecipe({ type: "minecraft:crafting_" + type, input: "hexalia:mortar_and_pestle" }, recipe => {
-            // Eeverse the order so that mortar and pestle appears first in the recipe
+            // Reverse the order so that mortar and pestle appears first in the recipe
             let ingredients = recipe.getOriginalRecipeIngredients().reversed().toArray();
             let output = recipe.originalRecipeResult;
 
@@ -149,7 +222,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: "hexalia:ritual_table",
         ingredients: [{ item: "hexalia:air_node" }].concat(crushedHerbs),
-        output: { item: "minecraft:phantom_membrane" }
+        output: { item: "minecraft:phantom_membrane" },
     }).id("hexalia:kjs/phantom_membrane_ritual_table");
 
     event.custom({
@@ -157,10 +230,30 @@ ServerEvents.recipes(event => {
         ingredients: [
             { item: "minecraft:rotten_flesh" },
             { item: "hearthandharvest:salt" },
-            { item: "hearthandharvest:salt" }
+            { item: "hearthandharvest:salt" },
         ],
-        output: { item: "minecraft:leather" }
+        output: { item: "minecraft:leather" },
     }).id("hexalia:kjs/leather_ritual_table");
+
+    alloySmelterOreRecipe(event, "minecraft:raw_gold", "minecraft:gold_ingot", 0, 1, 3);
+    alloySmelterOreRecipe(event, "minecraft:raw_iron", "minecraft:iron_ingot", 0, 1, 3);
+    alloySmelterOreRecipe(event, "minecraft:raw_copper", "minecraft:copper_ingot", 0, 1, 3);
+    alloySmelterOreRecipe(event, "minecraft:ancient_debris", "minecraft:netherite_scrap", 0, 0, 1);
+    alloySmelterOreRecipe(event, "pigsteel:pigsteel_chunk", "minecraft:iron_nugget", 1, 2, 4);
+    alloySmelterOreRecipe(event, "pigsteel:porkslag", "minecraft:iron_ingot", 0, 1, 3);
+
+    event.shaped("ring_of_enderchest:ring_of_enderchest",
+        [
+            " S ",
+            "SES",
+            " O ",
+        ],
+        {
+            E: "minecraft:ender_eye",
+            S: "minecraft:echo_shard",
+            O: "minecraft:obsidian",
+        },
+    ).id("ring_of_enderchest:kjs/ring_of_enderchest");
 });
 
 const potions = ["minecraft:splash_potion", "minecraft:lingering_potion"];
