@@ -2,6 +2,6 @@
     "values": [
         "minecraft:coal_block",
         "minecraft:blaze_rod",
-        "sulfar:sulfar_block"
+        "sulfar_mod:sulfar_block"
     ]
 }
