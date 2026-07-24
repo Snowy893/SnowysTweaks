@@ -3,8 +3,8 @@
   "biomes": "#minecraft:is_end",
   "spawners": {
     "type": "minecraft:phantom",
-    "maxCount": 4,
+    "maxCount": 1,
     "minCount": 1,
-    "weight": 2
+    "weight": 1
   }
 }

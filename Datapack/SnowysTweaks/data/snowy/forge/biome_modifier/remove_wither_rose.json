@@ -1,0 +1,8 @@
+{
+    "type": "forge:remove_features",
+    "biomes": "biomesoplenty:ominous_woods",
+    "features": [
+        "biomesoplenty:flower_ominous_woods"
+    ],
+    "steps": "vegetal_decoration"
+}
